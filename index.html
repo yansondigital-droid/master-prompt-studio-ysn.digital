@@ -1,0 +1,2563 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full antialiased dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Master Prompt Studio AI - Direktori 10.000+ Prompt Siap Pakai Indonesia</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                        },
+                        playful: {
+                            purple: '#6366f1',
+                            violet: '#8b5cf6',
+                            amber: '#f59e0b',
+                            cyan: '#06b6d4',
+                            rose: '#f43f5e',
+                            surfaceLight: '#edf2f6',
+                            surfaceDark: '#090d16'
+                        }
+                    }
+                }
+            }
+        };
+
+        function handleLogoError() {
+            var img = document.getElementById('customAppLogoImg');
+            var fallback = document.getElementById('customAppLogoFallback');
+            if (img) img.classList.add('hidden');
+            if (fallback) fallback.classList.remove('hidden');
+        }
+    </script>
+
+    <style>
+        .neu-flat-light {
+            background: #f8fafc;
+            box-shadow: 6px 6px 14px rgba(160, 175, 200, 0.35), -6px -6px 14px rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        .dark .neu-flat-dark {
+            background: #111827;
+            box-shadow: 6px 6px 16px rgba(3, 6, 12, 0.65), -4px -4px 12px rgba(26, 36, 56, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .neu-inset-light {
+            background: #eef2f6;
+            box-shadow: inset 3px 3px 6px rgba(160, 175, 200, 0.3), inset -3px -3px 6px rgba(255, 255, 255, 0.9);
+        }
+        .dark .neu-inset-dark {
+            background: #090d16;
+            box-shadow: inset 3px 3px 6px rgba(2, 4, 8, 0.7), inset -2px -2px 5px rgba(26, 36, 56, 0.2);
+        }
+        .neu-btn-light {
+            box-shadow: 4px 4px 10px rgba(160, 175, 200, 0.35), -4px -4px 10px rgba(255, 255, 255, 0.9);
+            transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .neu-btn-light:active {
+            box-shadow: inset 2px 2px 4px rgba(160, 175, 200, 0.4), inset -2px -2px 4px rgba(255, 255, 255, 0.8);
+            transform: scale(0.98);
+        }
+        .dark .neu-btn-dark {
+            box-shadow: 4px 4px 12px rgba(2, 4, 8, 0.6), -3px -3px 8px rgba(26, 36, 56, 0.25);
+            transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .dark .neu-btn-dark:active {
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.6), inset -1px -1px 3px rgba(35, 48, 74, 0.2);
+            transform: scale(0.98);
+        }
+        ::-webkit-scrollbar { width: 5px; height: 5px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.3); border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(148, 163, 184, 0.5); }
+        .active-template-item {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.16) 0%, rgba(99, 102, 241, 0.1) 100%);
+            border-left: 4px solid #10b981;
+            font-weight: 700;
+        }
+        @media (max-width: 1023px) {
+            .mobile-bottom-space { padding-bottom: 5.5rem; }
+        }
+
+        /* Shake animation for incorrect PIN */
+        @keyframes shakeAnim {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-8px); }
+            40%, 80% { transform: translateX(8px); }
+        }
+        .shake-pin {
+            animation: shakeAnim 0.35s ease-in-out;
+        }
+    </style>
+</head>
+<body class="h-full flex flex-col font-sans overflow-x-hidden antialiased bg-slate-100 text-slate-800 dark:bg-[#090d16] dark:text-slate-100 transition-colors duration-200 selection:bg-emerald-500 selection:text-white">
+
+    <!-- ======================================================== -->
+    <!-- PIN LOCK SCREEN OVERLAY (AUTHENTICATION GATEWAY) -->
+    <!-- ======================================================== -->
+    <div id="pinLockOverlay" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/95 dark:bg-[#070a12]/98 backdrop-blur-xl p-4 transition-all duration-300">
+        <div class="w-full max-w-sm flex flex-col items-center text-center space-y-6">
+            
+            <!-- App Logo & Security Shield -->
+            <div class="relative">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-3xl bg-gradient-to-tr from-emerald-500 via-teal-500 to-indigo-600 flex items-center justify-center text-white shadow-xl shadow-emerald-500/30 text-3xl font-black select-none">
+                    ⚡
+                </div>
+                <div class="absolute -bottom-2 -right-2 w-7 h-7 rounded-full bg-slate-900 border-2 border-emerald-500 text-emerald-400 flex items-center justify-center text-xs shadow-lg">
+                    🔒
+                </div>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <div class="space-y-1.5">
+                <h2 class="text-xl font-extrabold text-white tracking-tight">Master Prompt Studio AI</h2>
+                <p class="text-xs text-slate-400 font-medium">Masukkan PIN Keamanan untuk Membuka Aplikasi</p>
+            </div>
+
+            <!-- PIN Indicator Dots (8 Digits for PIN: 28061981) -->
+            <div id="pinDotsContainer" class="flex items-center justify-center space-x-2.5 py-2">
+                <span class="pin-dot w-3.5 h-3.5 rounded-full border-2 border-slate-600 bg-slate-800 transition-all duration-200"></span>
+                <span class="pin-dot w-3.5 h-3.5 rounded-full border-2 border-slate-600 bg-slate-800 transition-all duration-200"></span>
+                <span class="pin-dot w-3.5 h-3.5 rounded-full border-2 border-slate-600 bg-slate-800 transition-all duration-200"></span>
+                <span class="pin-dot w-3.5 h-3.5 rounded-full border-2 border-slate-600 bg-slate-800 transition-all duration-200"></span>
+                <span class="pin-dot w-3.5 h-3.5 rounded-full border-2 border-slate-600 bg-slate-800 transition-all duration-200"></span>
+                <span class="pin-dot w-3.5 h-3.5 rounded-full border-2 border-slate-600 bg-slate-800 transition-all duration-200"></span>
+                <span class="pin-dot w-3.5 h-3.5 rounded-full border-2 border-slate-600 bg-slate-800 transition-all duration-200"></span>
+                <span class="pin-dot w-3.5 h-3.5 rounded-full border-2 border-slate-600 bg-slate-800 transition-all duration-200"></span>
+            </div>
+
+            <!-- Error Notice -->
+            <div id="pinErrorMessage" class="text-xs font-bold text-rose-400 min-h-[1.25rem] transition-opacity opacity-0">
+                PIN tidak sesuai! Silakan coba lagi.
+            </div>
+
+            <!-- Soft Neumorphic On-Screen Numeric Keypad -->
+            <div class="grid grid-cols-3 gap-3 w-full max-w-[280px]">
+                <button type="button" onclick="inputPinDigit('1')" class="h-14 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 active:scale-95 text-xl font-bold text-white shadow-md border border-slate-700/60 transition flex items-center justify-center">1</button>
+                <button type="button" onclick="inputPinDigit('2')" class="h-14 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 active:scale-95 text-xl font-bold text-white shadow-md border border-slate-700/60 transition flex items-center justify-center">2</button>
+                <button type="button" onclick="inputPinDigit('3')" class="h-14 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 active:scale-95 text-xl font-bold text-white shadow-md border border-slate-700/60 transition flex items-center justify-center">3</button>
+                
+                <button type="button" onclick="inputPinDigit('4')" class="h-14 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 active:scale-95 text-xl font-bold text-white shadow-md border border-slate-700/60 transition flex items-center justify-center">4</button>
+                <button type="button" onclick="inputPinDigit('5')" class="h-14 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 active:scale-95 text-xl font-bold text-white shadow-md border border-slate-700/60 transition flex items-center justify-center">5</button>
+                <button type="button" onclick="inputPinDigit('6')" class="h-14 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 active:scale-95 text-xl font-bold text-white shadow-md border border-slate-700/60 transition flex items-center justify-center">6</button>
+                
+                <button type="button" onclick="inputPinDigit('7')" class="h-14 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 active:scale-95 text-xl font-bold text-white shadow-md border border-slate-700/60 transition flex items-center justify-center">7</button>
+                <button type="button" onclick="inputPinDigit('8')" class="h-14 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 active:scale-95 text-xl font-bold text-white shadow-md border border-slate-700/60 transition flex items-center justify-center">8</button>
+                <button type="button" onclick="inputPinDigit('9')" class="h-14 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 active:scale-95 text-xl font-bold text-white shadow-md border border-slate-700/60 transition flex items-center justify-center">9</button>
+                
+                <button type="button" onclick="clearPinDigits()" class="h-14 rounded-2xl bg-slate-800/40 hover:bg-slate-800 text-xs font-extrabold text-slate-400 active:scale-95 transition flex items-center justify-center" title="Bersihkan">HAPUS</button>
+                <button type="button" onclick="inputPinDigit('0')" class="h-14 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 active:scale-95 text-xl font-bold text-white shadow-md border border-slate-700/60 transition flex items-center justify-center">0</button>
+                <button type="button" onclick="deletePinDigit()" class="h-14 rounded-2xl bg-slate-800/40 hover:bg-slate-800 text-sm font-bold text-slate-300 active:scale-95 transition flex items-center justify-center" title="Hapus Satu Karakter">⌫</button>
+            </div>
+
+            <!-- Footer Help Note -->
+            <p class="text-[11px] text-slate-500 font-medium">
+                Dapat diketik langsung melalui keyboard fisik atau layar sentuh.
+            </p>
+        </div>
+    </div>
+
+    <!-- TOP APP BAR -->
+    <header class="shrink-0 border-b border-slate-200/80 dark:border-slate-800/80 bg-white/90 dark:bg-[#0d1322]/90 backdrop-blur-md sticky top-0 z-40 px-3 sm:px-4 lg:px-6 py-2.5 transition-colors">
+        <div class="w-full flex items-center justify-between gap-2 sm:gap-4">
+            
+            <!-- Left Branding -->
+            <div class="flex items-center space-x-2.5 sm:space-x-3.5">
+                <!-- Mobile Catalog Trigger -->
+                <button onclick="toggleMobileSidebar()" class="lg:hidden p-2 rounded-2xl bg-white dark:bg-slate-800/90 text-slate-700 dark:text-slate-200 neu-btn-light dark:neu-btn-dark active:scale-95 transition" aria-label="Buka Menu Katalog">
+                    <svg class="w-5 h-5 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+
+                <!-- Interactive Logo Badge -->
+                <div class="relative group cursor-pointer" onclick="openModal('logoModal')" title="Klik untuk Pengaturan Logo Aplikasi">
+                    <div id="appLogoBadge" class="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-gradient-to-tr from-emerald-500 via-teal-500 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-emerald-500/25 font-black text-lg select-none transform group-hover:scale-105 group-hover:rotate-3 transition overflow-hidden p-0.5">
+                        <img id="customAppLogoImg" alt="Logo Master Prompt Studio" class="w-full h-full object-contain rounded-xl hidden">
+                        <span id="customAppLogoFallback">⚡</span>
+                    </div>
+                    <span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-indigo-600 text-[8px] text-white flex items-center justify-center shadow-md ring-2 ring-white dark:ring-[#0d1322]" title="Atur Logo">🎨</span>
+                </div>
+                <div>
+                    <div class="flex items-center space-x-1.5 sm:space-x-2">
+                        <h1 class="text-sm sm:text-base font-extrabold tracking-tight text-slate-900 dark:text-white">Master Prompt Studio</h1>
+                        <span class="px-2 py-0.5 text-[10px] font-black rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30">10.000+ Prompt</span>
+                    </div>
+                    <p class="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 font-medium hidden sm:block">Akuntansi SAP/BPK, Setwan Kalteng, SAKIP/Renja, Barjas LKPP, ASN & Rekayasa Sistem</p>
+                </div>
+            </div>
+
+            <!-- Right Controls: Theme Toggle, Quick Guide, Lock Button, Preset Randomizer -->
+            <div class="flex items-center space-x-1.5 sm:space-x-2.5">
+                <!-- Jump to 10k Direct Button -->
+                <button onclick="switchAppMode('bank10k')" class="hidden md:inline-flex items-center px-3 py-1.5 text-xs font-bold rounded-2xl bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700/60 neu-btn-light dark:neu-btn-dark transition">
+                    <span class="mr-1.5">🔥</span>
+                    <span>Bank 10.000+</span>
+                </button>
+
+                <!-- Logo Settings Shortcut Button -->
+                <button onclick="openModal('logoModal')" class="hidden md:inline-flex items-center px-2.5 py-1.5 text-xs font-semibold rounded-2xl bg-white dark:bg-slate-800/90 text-slate-700 dark:text-slate-200 border border-slate-200/80 dark:border-slate-700/60 neu-btn-light dark:neu-btn-dark transition" title="Atur Logo Aplikasi">
+                    <span class="mr-1.5 text-indigo-500">🎨</span>
+                    <span>Logo</span>
+                </button>
+
+                <!-- Theme Toggle Button -->
+                <button onclick="toggleThemeMode()" id="themeToggleBtn" class="p-2 sm:px-3 sm:py-1.5 text-xs font-semibold rounded-2xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200/80 dark:border-slate-700/60 neu-btn-light dark:neu-btn-dark flex items-center space-x-1.5 active:scale-95 transition" title="Ganti Tema">
+                    <span id="themeIcon">🌙</span>
+                    <span class="hidden md:inline" id="themeText">Gelap</span>
+                </button>
+
+                <!-- Lock App Button (Re-locks with PIN 28061981) -->
+                <button onclick="lockApp()" class="p-2 sm:px-2.5 sm:py-1.5 text-xs font-semibold rounded-2xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200/80 dark:border-slate-700/60 neu-btn-light dark:neu-btn-dark flex items-center space-x-1 active:scale-95 transition" title="Kunci Aplikasi">
+                    <span>🔒</span>
+                    <span class="hidden sm:inline text-[11px] font-bold">Kunci</span>
+                </button>
+
+                <!-- Quick Guide Button -->
+                <button onclick="openModal('quickGuideModal')" class="hidden sm:inline-flex items-center px-3 py-1.5 text-xs font-semibold rounded-2xl bg-white dark:bg-slate-800/90 text-slate-700 dark:text-slate-200 border border-slate-200/80 dark:border-slate-700/60 neu-btn-light dark:neu-btn-dark transition">
+                    <span class="text-emerald-500 mr-1.5">💡</span>
+                    <span>Formula P-T-K-O-B</span>
+                </button>
+
+                <!-- Randomizer Button -->
+                <button onclick="loadRandomPreset()" class="inline-flex items-center px-3 py-1.5 sm:px-3.5 sm:py-2 text-xs font-bold rounded-2xl text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 shadow-md shadow-indigo-500/25 active:scale-95 transition">
+                    <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                    <span class="hidden xs:inline">Acak Kasus</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN WORKSPACE -->
+    <div class="flex-1 flex overflow-hidden relative">
+
+        <!-- Mobile Sidebar Backdrop -->
+        <div id="mobileBackdrop" onclick="toggleMobileSidebar()" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden lg:hidden transition-opacity"></div>
+
+        <!-- LEFT SIDEBAR: Comprehensive Categorized Template Catalog -->
+        <aside id="sidebarMenu" class="fixed lg:static inset-y-0 left-0 z-40 w-72 sm:w-80 bg-white dark:bg-[#0c1220] border-r border-slate-200 dark:border-slate-800/80 flex flex-col transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out shrink-0">
+            
+            <!-- Sidebar Header & Search Input -->
+            <div class="p-3.5 border-b border-slate-200 dark:border-slate-800">
+                <div class="flex items-center justify-between pb-2.5">
+                    <span class="text-xs font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center space-x-1.5">
+                        <span>📚</span>
+                        <span>Mode Navigasi Utama</span>
+                    </span>
+                    <span id="totalTemplatesCount" class="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-mono font-bold">10.200+ Prompt</span>
+                </div>
+                <div class="relative">
+                    <input type="text" id="templateSearchInput" oninput="filterTemplates()" placeholder="Cari kasus (CaLK, LRA, KIB, SPJ, BPK, SAKIP, Renja, SKP, Barjas)..." class="w-full bg-slate-50 dark:bg-[#080d17] border border-slate-200 dark:border-slate-800 text-xs rounded-2xl pl-8 pr-3 py-2.5 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 neu-inset-light dark:neu-inset-dark transition">
+                    <svg class="w-4 h-4 text-slate-400 absolute left-2.5 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                </div>
+            </div>
+
+            <!-- Mode Selector inside Sidebar -->
+            <div class="px-3 py-2 space-y-1.5 border-b border-slate-200 dark:border-slate-800/80">
+                <button onclick="switchAppMode('bank10k')" id="sidebarBtnBank10k" class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-bold bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700/50 transition">
+                    <span class="flex items-center space-x-2">
+                        <span>🔥</span>
+                        <span>Bank 10.000+ Prompt Terindeks</span>
+                    </span>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500 text-white font-extrabold">10.200+</span>
+                </button>
+                <button onclick="switchAppMode('catalog')" id="sidebarBtnCatalog" class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                    <span class="flex items-center space-x-2">
+                        <span>📑</span>
+                        <span>Katalog Kasus Riil Mendalam</span>
+                    </span>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold">10 Sektor</span>
+                </button>
+                <button onclick="switchAppMode('matrix')" id="sidebarBtnMatrix" class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                    <span class="flex items-center space-x-2">
+                        <span>⚡</span>
+                        <span>Matriks 1.000.000+ Permutasi</span>
+                    </span>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-600 dark:text-indigo-300 font-bold">Jutaan</span>
+                </button>
+                <button onclick="switchAppMode('synthesizer')" id="sidebarBtnSynthesizer" class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                    <span class="flex items-center space-x-2">
+                        <span>🧠</span>
+                        <span>Penyintesis Cerdas AI</span>
+                    </span>
+                    <span class="text-[10px] text-emerald-500 dark:text-emerald-400 font-bold">Instan</span>
+                </button>
+            </div>
+
+            <!-- Dynamic Scrollable Catalog Links -->
+            <div class="flex-1 overflow-y-auto p-2.5 space-y-3" id="sidebarNavContent">
+                <!-- Populated dynamically via renderSidebarCatalog() -->
+            </div>
+
+            <!-- Sidebar Footer with History Counter -->
+            <div class="p-3 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#070b13] flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+                <button onclick="openHistoryModal()" class="flex items-center space-x-1.5 font-semibold hover:text-emerald-600 dark:hover:text-emerald-400 transition">
+                    <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <span>Riwayat Salin (<span id="historyCounter" class="font-bold text-emerald-500">0</span>)</span>
+                </button>
+                <button onclick="resetCurrentFormToPreset()" class="hover:text-slate-900 dark:hover:text-slate-200 text-[11px] font-medium underline">Atur Ulang</button>
+            </div>
+        </aside>
+
+        <!-- CENTER & RIGHT: FLUID WORKSPACE -->
+        <main class="flex-1 overflow-y-auto p-3 sm:p-5 lg:p-6 flex flex-col space-y-4 mobile-bottom-space">
+
+            <!-- Playful Mode Selection Tabs for Desktop / Tablets -->
+            <div class="bg-white dark:bg-[#0e1424] p-1.5 rounded-2xl border border-slate-200 dark:border-slate-800 neu-flat-light dark:neu-flat-dark flex items-center space-x-1.5 overflow-x-auto text-xs shrink-0 scrollbar-none">
+                <button onclick="switchAppMode('bank10k')" id="tabModeBank10k" class="px-4 py-2.5 rounded-xl font-bold flex items-center space-x-2 bg-emerald-600 text-white shadow-sm transition whitespace-nowrap active:scale-95">
+                    <span>🔥</span>
+                    <span>Bank 10.000+ Prompt Terindeks</span>
+                    <span class="px-2 py-0.5 rounded-full text-[10px] bg-white/20 text-white font-extrabold">10.200+</span>
+                </button>
+                <button onclick="switchAppMode('catalog')" id="tabModeCatalog" class="px-4 py-2.5 rounded-xl font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/80 transition whitespace-nowrap flex items-center space-x-2 active:scale-95">
+                    <span>📑</span>
+                    <span>Katalog Kasus Riil Mendalam</span>
+                </button>
+                <button onclick="switchAppMode('matrix')" id="tabModeMatrix" class="px-4 py-2.5 rounded-xl font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/80 transition whitespace-nowrap flex items-center space-x-2 active:scale-95">
+                    <span>⚡</span>
+                    <span>Mesin Matriks 1.000.000+ Permutasi</span>
+                    <span class="px-2 py-0.5 rounded-full text-[10px] bg-indigo-500/20 text-indigo-600 dark:text-indigo-300 font-bold">Jutaan</span>
+                </button>
+                <button onclick="switchAppMode('synthesizer')" id="tabModeSynthesizer" class="px-4 py-2.5 rounded-xl font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/80 transition whitespace-nowrap flex items-center space-x-2 active:scale-95">
+                    <span>🧠</span>
+                    <span>AI Deep Synthesizer</span>
+                </button>
+            </div>
+
+            <!-- Active Header Card -->
+            <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-3xl p-4 sm:p-5 neu-flat-light dark:neu-flat-dark flex flex-col sm:flex-row sm:items-center justify-between gap-3 shrink-0">
+                <div class="space-y-1">
+                    <div class="flex items-center space-x-2 text-xs font-bold text-emerald-600 dark:text-emerald-400">
+                        <span id="activeCategoryBadge" class="flex items-center space-x-1">💰 Akuntansi & Keuangan Pemda</span>
+                        <span class="text-slate-300 dark:text-slate-600">/</span>
+                        <span id="activeTemplateBadge" class="text-slate-600 dark:text-slate-300">Penyusunan CaLK SAP Akrual</span>
+                    </div>
+                    <h2 id="activeTemplateTitle" class="text-base sm:text-lg font-black text-slate-900 dark:text-white tracking-tight">Penyusunan CaLK (Catatan atas Laporan Keuangan) Komprehensif SAP Akrual</h2>
+                    <p id="activeTemplateDesc" class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">Penyusunan naskah CaLK resmi Bab I s.d. VI: kebijakan akuntansi, analisis pos LRA vs LO, rekonsiliasi aset neraca, dan pengungkapan peristiwa penting (PP 71/2010 & Permendagri 77/2020).</p>
+                </div>
+                <div class="flex items-center space-x-2 shrink-0 self-end sm:self-center">
+                    <button onclick="resetCurrentFormToPreset()" id="btnFillPreset" class="px-3.5 py-2 text-xs font-bold rounded-2xl text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 border border-emerald-300/60 dark:border-emerald-700/50 neu-btn-light dark:neu-btn-dark active:scale-95 transition">
+                        Isi Contoh Riil
+                    </button>
+                    <button onclick="clearAllPromptFields()" class="px-3.5 py-2 text-xs font-bold rounded-2xl text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 neu-btn-light dark:neu-btn-dark active:scale-95 transition">
+                        Kosongkan
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile View Switcher (Segmented Tab Control for Mobile Phones) -->
+            <div class="lg:hidden flex items-center p-1 bg-white dark:bg-[#0e1424] rounded-2xl border border-slate-200 dark:border-slate-800 shrink-0 neu-inset-light dark:neu-inset-dark">
+                <button onclick="setMobileView('form')" id="mTabForm" class="flex-1 py-2 text-xs font-extrabold rounded-xl bg-emerald-600 text-white shadow-sm transition text-center">
+                    📝 Form / Bank Prompt
+                </button>
+                <button onclick="setMobileView('output')" id="mTabOutput" class="flex-1 py-2 text-xs font-extrabold rounded-xl text-slate-600 dark:text-slate-300 transition text-center flex items-center justify-center space-x-1.5">
+                    <span>⚡ Hasil Prompt</span>
+                    <span id="mobilePromptDot" class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                </button>
+            </div>
+
+            <!-- Two-Column Fluid Grid (Desktop/Laptop Full Screen, Responsive Mobile) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 flex-1 min-h-0">
+
+                <!-- LEFT COLUMN: Forms / Matrix / Synthesizer / Bank 10K -->
+                <div id="mobilePaneLeft" class="lg:col-span-5 flex flex-col space-y-4">
+                    
+                    <!-- CONTAINER 0: Bank 10.000+ Prompt Terindeks -->
+                    <div id="containerModeBank10k" class="bg-white dark:bg-[#111827] border border-emerald-200 dark:border-emerald-900/60 rounded-3xl p-4 sm:p-5 neu-flat-light dark:neu-flat-dark flex-1 flex flex-col space-y-3.5">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
+                            <div>
+                                <span class="text-xs font-extrabold text-slate-800 dark:text-white flex items-center space-x-1.5">
+                                    <span class="text-emerald-500">🔥</span>
+                                    <span>Eksplorasi Bank 10.200+ Prompt</span>
+                                </span>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Semua prompt berstatus siap pakai tanpa kurung siku.</p>
+                            </div>
+                            <span class="text-[10px] px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-mono font-bold">Total 10.200 Data</span>
+                        </div>
+
+                        <!-- Search, Filter Sektor & Jump to Prompt Number -->
+                        <div class="space-y-2 text-xs">
+                            <div class="flex gap-2">
+                                <input type="text" id="bankSearchQuery" oninput="handleBankSearch()" placeholder="Cari di 10.000 prompt (cth: calk, lra, kib, spj, bpk, renja, lakip, skp, barjas)..." class="flex-1 bg-slate-50 dark:bg-[#080d17] border border-slate-200 dark:border-slate-800 text-xs rounded-xl px-3 py-2 text-slate-900 dark:text-slate-100 neu-inset-light dark:neu-inset-dark focus:outline-none focus:ring-1 focus:ring-emerald-500">
+                                <select id="bankCategoryFilter" onchange="handleBankCategoryChange()" class="w-40 bg-slate-50 dark:bg-[#080d17] border border-slate-200 dark:border-slate-800 text-[11px] font-bold rounded-xl px-2 py-2 text-slate-800 dark:text-slate-200 focus:outline-none">
+                                    <option value="all">Semua Sektor (10k)</option>
+                                    <option value="keuangan">Akuntansi & SAP/BPK</option>
+                                    <option value="setwan">DPRD Prov. Kalteng</option>
+                                    <option value="sakip">Perencanaan & SAKIP</option>
+                                    <option value="barjas">Pengadaan Barjas LKPP</option>
+                                    <option value="asn">ASN, PPPK & SKP</option>
+                                    <option value="desa">Dana Desa & BUMDes</option>
+                                    <option value="kesehatan">RSUD & Puskesmas</option>
+                                    <option value="sekolah">Kurikulum Merdeka</option>
+                                    <option value="software">Software & API</option>
+                                    <option value="bisnis">Bisnis & Penjualan</option>
+                                    <option value="legal">SOP & Legal Drafting</option>
+                                </select>
+                            </div>
+
+                            <!-- Lompat ke nomor tertentu -->
+                            <div class="p-2.5 rounded-2xl bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 text-[11px]">
+                                <span class="font-bold text-slate-600 dark:text-slate-300">Lompat Cepat ke No. Prompt (#1 s/d #10200):</span>
+                                <div class="flex items-center space-x-1.5">
+                                    <input type="number" id="bankDirectIndexInput" min="1" max="10200" placeholder="1000" class="w-20 px-2 py-1 text-center font-mono font-bold rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0d1322] text-slate-900 dark:text-white">
+                                    <button onclick="jumpToPromptIndex()" class="px-2.5 py-1 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg font-bold text-[10px] active:scale-95 transition">Buka</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Scrollable List of 10k Items (Paginated) -->
+                        <div id="bank10kItemsList" class="flex-1 overflow-y-auto space-y-2 pr-1 min-h-[300px]">
+                            <!-- Dynamically populated via renderBankItems() -->
+                        </div>
+
+                        <!-- Pagination Footer -->
+                        <div class="pt-2 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+                            <button onclick="changeBankPage(-1)" id="btnBankPrev" class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 font-bold active:scale-95 transition disabled:opacity-40">◀ Sebelumnya</button>
+                            <span id="bankPaginationInfo" class="font-mono text-[11px] font-bold">Halaman 1 / 510</span>
+                            <button onclick="changeBankPage(1)" id="btnBankNext" class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 font-bold active:scale-95 transition disabled:opacity-40">Berikutnya ▶</button>
+                        </div>
+                    </div>
+
+                    <!-- CONTAINER 1: Catalog Form Inputs -->
+                    <div id="containerModeCatalog" class="hidden bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-3xl p-4 sm:p-5 neu-flat-light dark:neu-flat-dark flex-1 flex flex-col">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
+                            <span class="text-xs font-extrabold text-slate-800 dark:text-white flex items-center space-x-2">
+                                <span class="text-emerald-500">📝</span>
+                                <span>Parameter Kasus Nyata Mendalam</span>
+                            </span>
+                            <span class="text-[10px] px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-mono font-bold">Terkompilasi Otomatis</span>
+                        </div>
+
+                        <!-- Dynamic Inputs Form -->
+                        <form id="dynamicForm" oninput="compilePrompt()" class="mt-4 space-y-3.5 flex-1 pr-1 overflow-y-auto">
+                            <!-- Populated dynamically via renderDynamicForm() -->
+                        </form>
+
+                        <!-- Advanced Constraints Accordion -->
+                        <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800">
+                            <button type="button" onclick="toggleAdvancedFilters()" class="w-full flex items-center justify-between text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition">
+                                <span class="flex items-center space-x-2">
+                                    <span>🛡️</span>
+                                    <span>Batasan Kepatuhan & Anti-Halusinasi</span>
+                                </span>
+                                <span id="advChevron" class="text-xs">▼</span>
+                            </button>
+                            <div id="advancedFiltersBox" class="hidden mt-3 space-y-2 text-xs">
+                                <label class="flex items-center space-x-2.5 text-slate-700 dark:text-slate-300 cursor-pointer p-2 rounded-xl bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-slate-800/80">
+                                    <input type="checkbox" id="chkNoHalusinasi" checked onchange="compilePrompt()" class="rounded-lg text-emerald-600 focus:ring-0 w-4 h-4">
+                                    <span class="font-medium">Larang AI mengarang regulasi atau nomor pasal fiktif</span>
+                                </label>
+                                <label class="flex items-center space-x-2.5 text-slate-700 dark:text-slate-300 cursor-pointer p-2 rounded-xl bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-slate-800/80">
+                                    <input type="checkbox" id="chkFormatTabel" checked onchange="compilePrompt()" class="rounded-lg text-emerald-600 focus:ring-0 w-4 h-4">
+                                    <span class="font-medium">Wajibkan tabel matriks & checklist operasional</span>
+                                </label>
+                                <label class="flex items-center space-x-2.5 text-slate-700 dark:text-slate-300 cursor-pointer p-2 rounded-xl bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-slate-800/80">
+                                    <input type="checkbox" id="chkGayaFormal" checked onchange="compilePrompt()" class="rounded-lg text-emerald-600 focus:ring-0 w-4 h-4">
+                                    <span class="font-medium">Bahasa kedinasan resmi & akuntabel (EYD V)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONTAINER 2: Combinatorial Matrix Engine -->
+                    <div id="containerModeMatrix" class="hidden bg-white dark:bg-[#111827] border border-indigo-200 dark:border-indigo-900/60 rounded-3xl p-4 sm:p-5 neu-flat-light dark:neu-flat-dark flex-1 flex flex-col space-y-3.5">
+                        <div class="flex items-center justify-between pb-3 border-indigo-100 dark:border-indigo-900/40">
+                            <div>
+                                <h3 class="text-xs font-black text-slate-900 dark:text-white flex items-center space-x-1.5">
+                                    <span class="text-indigo-500">⚡</span>
+                                    <span>Mesin Matriks P-T-K-O-B Universal</span>
+                                </h3>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Rangkai prompt presisi dari 1.000.000+ kombinasi unik.</p>
+                            </div>
+                            <button onclick="randomizeMatrix()" class="px-3 py-1.5 text-xs font-black rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white shadow-md shadow-indigo-600/30 active:scale-95 transition flex items-center space-x-1">
+                                <span>🎲</span>
+                                <span>Putar Acak</span>
+                            </button>
+                        </div>
+
+                        <div class="space-y-3 flex-1 overflow-y-auto pr-1 text-xs">
+                            <!-- Dimensi 1 -->
+                            <div class="space-y-1">
+                                <label class="block font-bold text-indigo-700 dark:text-indigo-300">1. Peran Ahli (Persona Ahli):</label>
+                                <select id="matRole" onchange="generateFromMatrix()" class="w-full bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 rounded-2xl p-2.5 neu-inset-light dark:neu-inset-dark focus:ring-1 focus:ring-indigo-500"></select>
+                            </div>
+                            <!-- Dimensi 2 -->
+                            <div class="space-y-1">
+                                <label class="block font-bold text-emerald-700 dark:text-emerald-400">2. Sektor & Bidang Kasus (Konteks Lapangan):</label>
+                                <select id="matDomain" onchange="generateFromMatrix()" class="w-full bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 rounded-2xl p-2.5 neu-inset-light dark:neu-inset-dark focus:ring-1 focus:ring-indigo-500"></select>
+                            </div>
+                            <!-- Dimensi 3 -->
+                            <div class="space-y-1">
+                                <label class="block font-bold text-amber-700 dark:text-amber-400">3. Tugas Spesifik yang Dikerjakan (Tugas Utama):</label>
+                                <select id="matTask" onchange="generateFromMatrix()" class="w-full bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 rounded-2xl p-2.5 neu-inset-light dark:neu-inset-dark focus:ring-1 focus:ring-indigo-500"></select>
+                            </div>
+                            <!-- Dimensi 4 -->
+                            <div class="space-y-1">
+                                <label class="block font-bold text-cyan-700 dark:text-cyan-400">4. Bentuk Format Dokumen (Keluaran Baku):</label>
+                                <select id="matOutput" onchange="generateFromMatrix()" class="w-full bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 rounded-2xl p-2.5 neu-inset-light dark:neu-inset-dark focus:ring-1 focus:ring-indigo-500"></select>
+                            </div>
+                            <!-- Dimensi 5 -->
+                            <div class="space-y-1">
+                                <label class="block font-bold text-rose-700 dark:text-rose-400">5. Kepatuhan Standar (Batasan Regulasi):</label>
+                                <select id="matConstraint" onchange="generateFromMatrix()" class="w-full bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 rounded-2xl p-2.5 neu-inset-light dark:neu-inset-dark focus:ring-1 focus:ring-indigo-500"></select>
+                            </div>
+                            <!-- Detail Tambahan Kasus -->
+                            <div class="space-y-1 pt-1">
+                                <label class="block font-bold text-slate-700 dark:text-slate-300">Variabel Khusus Tambahan (Opsional):</label>
+                                <input type="text" id="matCustomNotes" oninput="generateFromMatrix()" placeholder="Contoh: Fokus rekonsiliasi belanja modal KIB C dan akun SiLPA..." class="w-full bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 rounded-2xl p-2.5 neu-inset-light dark:neu-inset-dark focus:ring-1 focus:ring-indigo-500">
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-t border-indigo-100 dark:border-indigo-900/40 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
+                            <span>Kombinasi Aktif: <strong class="text-indigo-600 dark:text-indigo-400 font-bold">1.000.000+ Permutasi</strong></span>
+                            <button onclick="generateFromMatrix()" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-bold active:scale-95 transition">Rangkai Ulang</button>
+                        </div>
+                    </div>
+
+                    <!-- CONTAINER 3: AI Deep Prompt Synthesizer -->
+                    <div id="containerModeSynthesizer" class="hidden bg-white dark:bg-[#111827] border border-emerald-200 dark:border-emerald-900/60 rounded-3xl p-4 sm:p-5 neu-flat-light dark:neu-flat-dark flex-1 flex flex-col space-y-3.5">
+                        <div class="pb-3 border-b border-emerald-100 dark:border-emerald-900/40">
+                            <h3 class="text-xs font-black text-slate-900 dark:text-white flex items-center space-x-1.5">
+                                <span class="text-emerald-500">🧠</span>
+                                <span>Penyintesis Prompt AI Cerdas</span>
+                            </h3>
+                            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Tulis 1 kalimat ide, AI mengubahnya menjadi Master Prompt P-T-K-O-B lengkap.</p>
+                        </div>
+
+                        <div class="space-y-3 flex-1 flex flex-col">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Ide Bebas / Kebutuhan Kantor Anda:</label>
+                                <textarea id="synthRawInput" rows="3" placeholder="Contoh: Susun draf CaLK bab penjelasan belanja modal jalan dan jembatan yang mengalami efisiensi anggaran 8%..." class="w-full bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs rounded-2xl p-3 neu-inset-light dark:neu-inset-dark focus:ring-1 focus:ring-emerald-500 focus:outline-none"></textarea>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                                <div>
+                                    <label class="block text-slate-500 dark:text-slate-400 text-[11px] font-bold mb-1">Sasaran Peran Ahli:</label>
+                                    <select id="synthRoleSelect" class="w-full bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs rounded-2xl p-2.5 neu-inset-light dark:neu-inset-dark">
+                                        <option value="Pakar Akuntansi Pemerintah (PPKD) & Auditor BPK RI">Pakar Akuntansi SAP / Auditor BPK</option>
+                                        <option value="Sekretariat DPRD Provinsi Kalimantan Tengah">Sekretariat DPRD Prov. Kalteng</option>
+                                        <option value="Perencana Ahli Madya Bappeda & Tim Evaluator SAKIP / LAKIP">Perencana Bappeda / SAKIP & LAKIP</option>
+                                        <option value="Pejabat Penatausahaan Keuangan (PPK-SKPD) & Bendahara">PPK-SKPD / Bendahara Pengeluaran</option>
+                                        <option value="Pejabat Pembuat Komitmen (PPK) Madya LKPP">PPK Madya LKPP</option>
+                                        <option value="Analis SDM Aparatur Ahli Madya & Tim BKN / KemenPANRB">Analis SDM ASN / Tim Penilai SKP</option>
+                                        <option value="Auditor APIP / Inspektorat Daerah">Auditor APIP / Inspektorat Daerah</option>
+                                        <option value="Tenaga Ahli Tata Kelola Dana Desa & SISKEUDES">Tenaga Ahli Dana Desa / SISKEUDES</option>
+                                        <option value="Arsitek Perangkat Lunak Utama (Principal Architect)">Arsitek Perangkat Lunak Utama</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-slate-500 dark:text-slate-400 text-[11px] font-bold mb-1">Tingkat Kedalaman:</label>
+                                    <select id="synthDepthSelect" class="w-full bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs rounded-2xl p-2.5 neu-inset-light dark:neu-inset-dark">
+                                        <option value="Sangat Mendalam & Komprehensif (Multi-Bab dan Matriks Rekonsiliasi)">Sangat Mendalam (Multi-Bab & Matriks)</option>
+                                        <option value="Tegas, Padat & Siap Eksekusi">Tegas, Ringkas & Siap Eksekusi</option>
+                                        <option value="Kepatuhan Ketat Bebas Temuan Audit BPK RI">Kepatuhan Ketat Bebas Temuan Audit BPK</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button onclick="synthesizeMasterPrompt()" id="btnStartSynthesizer" class="mt-2 w-full py-3 px-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600 hover:from-emerald-500 hover:to-indigo-500 text-white rounded-2xl text-xs font-black shadow-lg shadow-emerald-500/20 active:scale-95 transition flex items-center justify-center space-x-2">
+                                <span>⚡</span>
+                                <span>Sintesis Menjadi Master Prompt Lengkap</span>
+                            </button>
+
+                            <div id="synthLoading" class="hidden py-3 flex flex-col items-center justify-center space-y-1.5">
+                                <div class="w-6 h-6 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin"></div>
+                                <span class="text-[11px] text-slate-500 dark:text-slate-400 font-medium animate-pulse">Menghubungkan ke Gemini 3 Flash...</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-2 border-t border-slate-200 dark:border-slate-800 text-[11px] text-slate-500 dark:text-slate-400">
+                            💡 Mengubah ide singkat menjadi naskah prompt berstandar tanpa tanda kurung siku kosong.
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT COLUMN: Output Preview & Live AI Runner -->
+                <div id="mobilePaneRight" class="lg:col-span-7 flex flex-col space-y-4">
+                    
+                    <!-- Action Bar: Copy, Export, Run AI -->
+                    <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-3xl p-3 sm:p-4 neu-flat-light dark:neu-flat-dark flex flex-wrap items-center justify-between gap-2.5 shrink-0">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                            <span class="text-xs font-black uppercase tracking-wider text-slate-800 dark:text-slate-200">Prompt Siap Salin</span>
+                            <span id="charCountBadge" class="text-[11px] px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-mono font-bold">0 karakter</span>
+                        </div>
+
+                        <div class="flex items-center space-x-2">
+                            <!-- Direct Copy Button -->
+                            <button id="copyPromptBtn" onclick="copyCompiledPrompt()" class="inline-flex items-center px-4 py-2.5 text-xs sm:text-sm font-black rounded-2xl text-white bg-emerald-600 hover:bg-emerald-500 active:scale-95 shadow-md shadow-emerald-600/25 transition">
+                                <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                                <span>Salin Lengkap</span>
+                            </button>
+                            <!-- Download Text File -->
+                            <button onclick="downloadPromptText()" class="p-2.5 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-2xl neu-btn-light dark:neu-btn-dark active:scale-95 transition" title="Unduh File .TXT">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                            </button>
+                            <!-- Run Live AI -->
+                            <button id="runAiBtn" onclick="executeWithGemini()" class="inline-flex items-center px-3.5 py-2.5 text-xs sm:text-sm font-bold rounded-2xl text-indigo-700 dark:text-indigo-200 bg-indigo-50 dark:bg-indigo-950/80 hover:bg-indigo-100 dark:hover:bg-indigo-900 border border-indigo-200 dark:border-indigo-700/60 active:scale-95 transition">
+                                <svg class="w-4 h-4 mr-1 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                <span>Uji AI</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Prompt View Container -->
+                    <div class="relative bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-3xl p-4 flex-1 flex flex-col neu-flat-light dark:neu-flat-dark min-h-[360px]">
+                        <div class="flex items-center justify-between pb-2.5 border-b border-slate-200 dark:border-slate-800 text-[11px] text-slate-500 dark:text-slate-400">
+                            <span class="font-mono text-emerald-600 dark:text-emerald-400 font-bold flex items-center space-x-1.5">
+                                <span>●</span> <span>Format: P-T-K-O-B Siap Pakai</span>
+                            </span>
+                            <span class="hidden sm:inline">Tinggal Tempel di ChatGPT / Claude / Gemini</span>
+                        </div>
+
+                        <div class="relative flex-1 mt-3">
+                            <textarea id="compiledPromptView" readonly class="w-full h-full min-h-[300px] lg:min-h-[360px] bg-slate-50 dark:bg-[#070b13] text-slate-800 dark:text-slate-100 font-mono text-xs p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 neu-inset-light dark:neu-inset-dark focus:outline-none resize-none leading-relaxed scrollbar-thin"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Live AI Execution Card -->
+                    <div id="aiResultCard" class="hidden bg-white dark:bg-[#111827] border border-indigo-200 dark:border-indigo-900/60 rounded-3xl p-4 sm:p-5 neu-flat-light dark:neu-flat-dark transition-all">
+                        <div class="flex items-center justify-between pb-3 border-b border-indigo-100 dark:border-indigo-800/40">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-indigo-500 animate-ping"></span>
+                                <h3 class="text-xs sm:text-sm font-black text-slate-900 dark:text-white flex items-center space-x-2">
+                                    <span>🤖</span>
+                                    <span>Hasil Uji Coba AI (Gemini 3 Flash)</span>
+                                </h3>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <button onclick="copyAiOutput()" class="text-xs px-3 py-1 font-bold rounded-xl bg-indigo-50 dark:bg-slate-800 hover:bg-indigo-100 dark:hover:bg-slate-700 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-700/50 neu-btn-light dark:neu-btn-dark">Salin Hasil</button>
+                                <button onclick="closeAiResult()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white text-sm font-bold px-1.5">✕</button>
+                            </div>
+                        </div>
+
+                        <div id="aiLoadingIndicator" class="hidden py-8 flex flex-col items-center justify-center space-y-3">
+                            <div class="w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium animate-pulse">Menghasilkan dokumen resmi via Gemini 3 Flash...</p>
+                        </div>
+
+                        <div id="aiResultText" class="mt-4 text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed whitespace-pre-wrap max-h-[420px] overflow-y-auto p-4 bg-slate-50 dark:bg-[#070b13] rounded-2xl border border-slate-200 dark:border-slate-800 font-sans neu-inset-light dark:neu-inset-dark">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- NATIVE MOBILE BOTTOM DOCK -->
+    <nav class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 dark:bg-[#0c1220]/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800/80 px-2 py-2 flex items-center justify-around text-[10px] font-bold text-slate-600 dark:text-slate-400 shadow-xl">
+        <button onclick="switchAppMode('bank10k')" class="flex flex-col items-center p-1.5 rounded-xl hover:text-emerald-500 active:scale-90 transition">
+            <span class="text-lg">🔥</span>
+            <span>Bank 10k</span>
+        </button>
+        <button onclick="toggleMobileSidebar()" class="flex flex-col items-center p-1.5 rounded-xl hover:text-emerald-500 active:scale-90 transition">
+            <span class="text-lg">📚</span>
+            <span>Katalog</span>
+        </button>
+        <button onclick="switchAppMode('matrix')" class="flex flex-col items-center p-1.5 rounded-xl hover:text-indigo-500 active:scale-90 transition">
+            <span class="text-lg">⚡</span>
+            <span>Matriks</span>
+        </button>
+        <button onclick="copyCompiledPrompt()" class="flex flex-col items-center p-1.5 rounded-xl text-emerald-600 dark:text-emerald-400 active:scale-90 transition">
+            <div class="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400 text-sm font-black mb-0.5 shadow-sm">
+                📋
+            </div>
+            <span>Salin</span>
+        </button>
+        <button onclick="lockApp()" class="flex flex-col items-center p-1.5 rounded-xl hover:text-rose-500 active:scale-90 transition">
+            <span class="text-lg">🔒</span>
+            <span>Kunci</span>
+        </button>
+    </nav>
+
+    <!-- Modal 1: Panduan Formula P-T-K-O-B -->
+    <div id="quickGuideModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm hidden p-4">
+        <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-700 rounded-3xl max-w-2xl w-full p-5 sm:p-6 shadow-2xl overflow-y-auto max-h-[90vh] neu-flat-light dark:neu-flat-dark">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
+                <h3 class="text-base font-black text-slate-900 dark:text-white flex items-center space-x-2">
+                    <span>🧠</span>
+                    <span>Mengapa Anda Tidak Perlu Menghafal Ribuan Prompt?</span>
+                </h3>
+                <button onclick="closeModal('quickGuideModal')" class="text-slate-400 hover:text-slate-600 dark:hover:text-white text-lg font-bold">✕</button>
+            </div>
+            <div class="mt-4 text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-3.5 leading-relaxed">
+                <p>Buku <em>"1.000 Prompt Rahasia"</em> sebenarnya hanya menerapkan 1 formula inti ke berbagai bidang industri. Model kecerdasan buatan (LLM) bekerja berdasarkan kelengkapan konteks, bukan hafalan kata gaib.</p>
+                
+                <div class="p-3.5 bg-slate-50 dark:bg-[#070b13] rounded-2xl border border-slate-200 dark:border-slate-800 space-y-2 neu-inset-light dark:neu-inset-dark">
+                    <div class="font-extrabold text-emerald-600 dark:text-emerald-400">Formula Universal P-T-K-O-B:</div>
+                    <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                        <li><strong>Peran (Role):</strong> Tetapkan identitas spesifik & keahlian resmi (misal: "Kepala Bidang Akuntansi PPKD", "Auditor BPK RI", "Perencana Ahli Madya Bappeda", "Sekretaris DPRD Prov. Kalteng", atau "PPK Madya LKPP").</li>
+                        <li><strong>Tugas (Task):</strong> Instruksi teknis yang ingin diselesaikan secara gamblang dan terinci (cth: Penyusunan CaLK SAP Akrual, Rekonsiliasi KIB vs Belanja Modal, SPJ DPRD, Renja, LAKIP, SKP ASN).</li>
+                        <li><strong>Konteks (Context):</strong> Kondisi spesifik, data awal, pagu anggaran, realisasi belanja, target IKU, atau batasan sistem Anda saat ini.</li>
+                        <li><strong>Keluaran (Output):</strong> Format struktur dokumen yang diharapkan (Draf Multi-BAB CaLK, Matriks Rekonsiliasi KIB, Tabel TC-33 Renja, Berita Acara Kas Opname).</li>
+                        <li><strong>Batasan (Constraints):</strong> Apa yang dilarang (misal: "Dilarang mengarang regulasi fiktif", "Wajib patuh PP 71/2010 SAP Akrual, Permendagri 77/2020, dan PP 18/2017").</li>
+                    </ul>
+                </div>
+
+                <p>Aplikasi ini secara otomatis mengonversi data masukan Anda menjadi formula di atas tanpa menyisakan tanda kurung siku <code>[...]</code> yang membingungkan!</p>
+            </div>
+            <div class="mt-5 flex justify-end">
+                <button onclick="closeModal('quickGuideModal')" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl text-xs font-bold shadow-md shadow-emerald-600/30 active:scale-95 transition">Saya Mengerti</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Copy History Modal -->
+    <div id="historyModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm hidden p-4">
+        <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-700 rounded-3xl max-w-xl w-full p-5 shadow-2xl flex flex-col max-h-[80vh] neu-flat-light dark:neu-flat-dark">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
+                <h3 class="text-sm font-black text-slate-900 dark:text-white flex items-center space-x-2">
+                    <span>🕒</span>
+                    <span>Riwayat Prompt yang Pernah Disalin</span>
+                </h3>
+                <button onclick="closeModal('historyModal')" class="text-slate-400 hover:text-slate-600 dark:hover:text-white text-lg font-bold">✕</button>
+            </div>
+            <div id="historyListContainer" class="flex-1 overflow-y-auto mt-3 space-y-2 text-xs pr-1">
+                <!-- Dynamically populated -->
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center text-xs">
+                <button onclick="clearHistoryStorage()" class="text-rose-500 hover:underline font-bold">Hapus Semua Riwayat</button>
+                <button onclick="closeModal('historyModal')" class="px-3.5 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl text-slate-700 dark:text-slate-200 font-bold neu-btn-light dark:neu-btn-dark">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Pengaturan Logo Aplikasi -->
+    <div id="logoModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm hidden p-4">
+        <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-700 rounded-3xl max-w-lg w-full p-5 sm:p-6 shadow-2xl flex flex-col max-h-[90vh] overflow-y-auto neu-flat-light dark:neu-flat-dark">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
+                <h3 class="text-sm sm:text-base font-black text-slate-900 dark:text-white flex items-center space-x-2">
+                    <span>🎨</span>
+                    <span>Pengaturan Logo Aplikasi</span>
+                </h3>
+                <button onclick="closeModal('logoModal')" class="text-slate-400 hover:text-slate-600 dark:hover:text-white text-lg font-bold">✕</button>
+            </div>
+
+            <div class="mt-4 space-y-4 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-[#070b13] border border-slate-200 dark:border-slate-800 space-y-3">
+                    <span class="font-extrabold text-slate-800 dark:text-slate-200 text-xs flex items-center space-x-1.5">
+                        <span>🖼️</span>
+                        <span>Pasang Gambar Logo Langsung ke Navbar:</span>
+                    </span>
+
+                    <div class="space-y-2">
+                        <label class="block text-[11px] font-semibold text-slate-500 dark:text-slate-400">Opsi 1: Tempel Tautan URL Gambar Langsung (.png / .svg / .jpg):</label>
+                        <div class="flex gap-2">
+                            <input type="url" id="customLogoDirectUrlInput" placeholder="https://domain.com/logo-aplikasi.png" class="flex-1 bg-white dark:bg-[#0d1322] border border-slate-200 dark:border-slate-700 text-xs rounded-xl px-3 py-2 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-1 focus:ring-emerald-500">
+                            <button onclick="saveCustomLogoDirectUrl()" class="px-3 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-xs active:scale-95 transition">Terapkan</button>
+                        </div>
+                    </div>
+
+                    <div class="space-y-1.5 pt-1 border-t border-slate-200 dark:border-slate-800">
+                        <label class="block text-[11px] font-semibold text-slate-500 dark:text-slate-400">Opsi 2: Unggah Berkas Logo dari Galeri/Perangkat (Disimpan Lokal):</label>
+                        <input type="file" id="logoFileInput" accept="image/*" onchange="handleLogoFileUpload(event)" class="w-full text-xs text-slate-500 dark:text-slate-400 file:mr-3 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-emerald-500/15 file:text-emerald-700 dark:file:text-emerald-300 hover:file:bg-emerald-500/25 cursor-pointer">
+                    </div>
+
+                    <div class="flex justify-between items-center pt-1 text-[11px]">
+                        <span class="text-slate-400">Logo tersimpan di peramban Anda (LocalStorage).</span>
+                        <button onclick="resetAppLogo()" class="text-rose-500 hover:underline font-bold">Atur Ulang ke Ikon Bawaan</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5 flex justify-end">
+                <button onclick="closeModal('logoModal')" class="px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-xl text-xs font-bold active:scale-95 transition">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Element -->
+    <div id="toast" class="fixed bottom-20 lg:bottom-6 right-4 sm:right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 flex items-center space-x-3 px-4 py-3 bg-white dark:bg-[#0f172a] border border-emerald-500/50 text-slate-800 dark:text-white text-xs sm:text-sm rounded-2xl shadow-2xl neu-flat-light dark:neu-flat-dark">
+        <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-black">✓</span>
+        <span id="toastMessage" class="font-bold">Prompt berhasil disalin!</span>
+    </div>
+
+    <script>
+        // ==========================================
+        // PIN AUTHENTICATION SYSTEM (PIN: 28061981)
+        // ==========================================
+        const MASTER_PIN = "28061981";
+        let enteredPin = "";
+
+        function checkPinAuth() {
+            const isAuth = sessionStorage.getItem('mps_authenticated');
+            const overlay = document.getElementById('pinLockOverlay');
+            if (isAuth === 'true') {
+                if (overlay) overlay.classList.add('hidden');
+            } else {
+                if (overlay) overlay.classList.remove('hidden');
+                enteredPin = "";
+                updatePinDotsUI();
+            }
+        }
+
+        function inputPinDigit(digit) {
+            if (enteredPin.length < MASTER_PIN.length) {
+                enteredPin += String(digit);
+                updatePinDotsUI();
+                hidePinError();
+
+                if (enteredPin.length === MASTER_PIN.length) {
+                    setTimeout(verifyPin, 100);
+                }
+            }
+        }
+
+        function deletePinDigit() {
+            if (enteredPin.length > 0) {
+                enteredPin = enteredPin.slice(0, -1);
+                updatePinDotsUI();
+                hidePinError();
+            }
+        }
+
+        function clearPinDigits() {
+            enteredPin = "";
+            updatePinDotsUI();
+            hidePinError();
+        }
+
+        function updatePinDotsUI() {
+            const dots = document.querySelectorAll('#pinDotsContainer .pin-dot');
+            dots.forEach((dot, index) => {
+                if (index < enteredPin.length) {
+                    dot.className = "pin-dot w-3.5 h-3.5 rounded-full border-2 border-emerald-500 bg-emerald-500 shadow-md shadow-emerald-500/50 scale-110 transition-all duration-200";
+                } else {
+                    dot.className = "pin-dot w-3.5 h-3.5 rounded-full border-2 border-slate-600 bg-slate-800 transition-all duration-200";
+                }
+            });
+        }
+
+        function verifyPin() {
+            const overlay = document.getElementById('pinLockOverlay');
+            const errEl = document.getElementById('pinErrorMessage');
+            const dotsContainer = document.getElementById('pinDotsContainer');
+
+            if (enteredPin === MASTER_PIN) {
+                sessionStorage.setItem('mps_authenticated', 'true');
+                dotsContainer.classList.remove('shake-pin');
+                showToast("✓ Akses Berhasil! Selamat datang di Master Prompt Studio.");
+                
+                // Visual feedback success
+                const dots = document.querySelectorAll('#pinDotsContainer .pin-dot');
+                dots.forEach(d => d.className = "pin-dot w-3.5 h-3.5 rounded-full border-2 border-emerald-400 bg-emerald-400 shadow-lg scale-125 transition-all");
+                
+                setTimeout(() => {
+                    if (overlay) {
+                        overlay.classList.add('opacity-0');
+                        setTimeout(() => {
+                            overlay.classList.add('hidden');
+                            overlay.classList.remove('opacity-0');
+                        }, 250);
+                    }
+                }, 200);
+            } else {
+                // Incorrect PIN
+                if (errEl) {
+                    errEl.textContent = "PIN tidak sesuai! Silakan coba lagi.";
+                    errEl.classList.remove('opacity-0');
+                }
+                if (dotsContainer) {
+                    dotsContainer.classList.add('shake-pin');
+                    setTimeout(() => dotsContainer.classList.remove('shake-pin'), 400);
+                }
+                setTimeout(() => {
+                    clearPinDigits();
+                }, 500);
+            }
+        }
+
+        function hidePinError() {
+            const errEl = document.getElementById('pinErrorMessage');
+            if (errEl) errEl.classList.add('opacity-0');
+        }
+
+        function lockApp() {
+            sessionStorage.removeItem('mps_authenticated');
+            checkPinAuth();
+            showToast("Aplikasi telah terkunci.");
+        }
+
+        // Physical Keyboard Support for PIN
+        window.addEventListener('keydown', (e) => {
+            const overlay = document.getElementById('pinLockOverlay');
+            if (overlay && !overlay.classList.contains('hidden')) {
+                if (/^[0-9]$/.test(e.key)) {
+                    inputPinDigit(e.key);
+                } else if (e.key === 'Backspace') {
+                    deletePinDigit();
+                } else if (e.key === 'Escape') {
+                    clearPinDigits();
+                }
+            }
+        });
+
+        // ==========================================
+        // THEME & VIEW MANAGEMENT
+        // ==========================================
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+                updateThemeUI(true);
+            } else {
+                document.documentElement.classList.remove('dark');
+                updateThemeUI(false);
+            }
+        }
+
+        function toggleThemeMode() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateThemeUI(isDark);
+            showToast(isDark ? 'Mode Gelap diaktifkan' : 'Mode Terang diaktifkan');
+        }
+
+        function updateThemeUI(isDark) {
+            const icon = document.getElementById('themeIcon');
+            const text = document.getElementById('themeText');
+            if (icon) icon.textContent = isDark ? '☀️' : '🌙';
+            if (text) text.textContent = isDark ? 'Terang' : 'Gelap';
+        }
+
+        let currentMobileView = 'form';
+        function setMobileView(view) {
+            currentMobileView = view;
+            const paneLeft = document.getElementById('mobilePaneLeft');
+            const paneRight = document.getElementById('mobilePaneRight');
+            const mTabForm = document.getElementById('mTabForm');
+            const mTabOutput = document.getElementById('mTabOutput');
+
+            if (window.innerWidth >= 1024) {
+                paneLeft.classList.remove('hidden');
+                paneRight.classList.remove('hidden');
+                return;
+            }
+
+            if (view === 'form') {
+                paneLeft.classList.remove('hidden');
+                paneRight.classList.add('hidden');
+                mTabForm.className = "flex-1 py-2 text-xs font-extrabold rounded-xl bg-emerald-600 text-white shadow-sm transition text-center";
+                mTabOutput.className = "flex-1 py-2 text-xs font-extrabold rounded-xl text-slate-600 dark:text-slate-300 transition text-center flex items-center justify-center space-x-1.5";
+            } else {
+                paneLeft.classList.add('hidden');
+                paneRight.classList.remove('hidden');
+                mTabOutput.className = "flex-1 py-2 text-xs font-extrabold rounded-xl bg-emerald-600 text-white shadow-sm transition text-center flex items-center justify-center space-x-1.5";
+                mTabForm.className = "flex-1 py-2 text-xs font-extrabold rounded-xl text-slate-600 dark:text-slate-300 transition text-center";
+            }
+        }
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) {
+                document.getElementById('mobilePaneLeft').classList.remove('hidden');
+                document.getElementById('mobilePaneRight').classList.remove('hidden');
+            } else {
+                setMobileView(currentMobileView);
+            }
+        });
+
+        // ==========================================
+        // COMPREHENSIVE MULTI-SECTOR MASTER CATALOG
+        // ==========================================
+        const CATALOG = [
+            // KATEGORI 0: KEUANGAN & AKUNTANSI PEMDA (SAP / BPK / SIPD) & SETWAN DPRD KALTENG
+            {
+                categoryKey: 'keuangan_pemda',
+                categoryName: 'Akuntansi & Keuangan Pemda (SAP/BPK)',
+                categoryIcon: '💰',
+                templates: [
+                    {
+                        id: 'keu_calk_sap_akrual',
+                        name: 'Penyusunan CaLK (Catatan atas Laporan Keuangan) Komprehensif SAP Akrual',
+                        description: 'Format naratif CaLK resmi Bab I s.d. VI: kebijakan akuntansi, analisis pos LRA vs LO, rekonsiliasi aset neraca, dan pengungkapan penting (PP 71/2010 & Permendagri 77/2020).',
+                        fields: [
+                            { id: 'namaEntitasCalk', label: 'Nama Entitas Satuan Kerja Perangkat Daerah (SKPD)', type: 'text', default: 'Badan Pengelolaan Keuangan dan Aset Daerah (BPKAD) / Dinas Pekerjaan Umum' },
+                            { id: 'tahunAnggaranCalk', label: 'Tahun Anggaran & Realisasi LRA vs LO', type: 'text', default: 'Tahun Anggaran 2025 (Tutup Buku) - Pagu Belanja LRA: Rp 145.800.000.000,- | Realisasi: Rp 138.250.000.000,- (94,82%) | Beban Operasional LO: Rp 124.500.000.000,-' },
+                            { id: 'posAkunDominan', label: 'Rincian Realisasi Pos Belanja & Beban Dominan', type: 'textarea', default: '1. Belanja Operasi LRA: Pagu Rp 82,5 M | Realisasi Rp 79,8 M (96,73%) - Gaji, TPP ASN, belanja barang jasa dan pemeliharaan.\n2. Belanja Modal LRA: Pagu Rp 63,3 M | Realisasi Rp 58,45 M (92,34%) - Belanja modal jalan irigasi jaringan (JJI) Rp 42,1 M dan gedung bangunan Rp 16,35 M.\n3. Beban LO: Beban Penyusutan dan Amortisasi sebesar Rp 14,8 Miliar dan Beban Penyisihan Piutang Rp 450 Juta.' },
+                            { id: 'kebijakanAsetRekon', label: 'Kebijakan Akuntansi, Rekonsiliasi Aset & Ekuitas', type: 'textarea', default: 'Kebijakan akuntansi berbasis akrual penuh. Belanja modal sebesar Rp 58,45 M telah dikapitalisasi ke Neraca menjadi Aset Tetap setelah memperhitungkan Konstruksi Dalam Pengerjaan (KDP) akhir tahun Rp 3,2 Miliar. Akumulasi penyusutan menggunakan metode garis lurus. Ekuitas akhir per 31 Desember 2025 tercatat Rp 412.800.000.000,-.' },
+                            { id: 'pengungkapanPenting', label: 'Pengungkapan Peristiwa Penting (Disclosures) & SiLPA', type: 'textarea', default: 'SiLPA tahun berjalan sebesar Rp 7.550.000.000,- telah disetor ke Rekening Kas Umum Daerah (RKUD). Tidak terdapat utang belanja pihak ketiga yang melampaui tahun anggaran. Terdapat penyelesaian sengketa klaim tanah senilai Rp 850 Juta yang telah berkekuatan hukum tetap (inkracht) dan diakui sebagai kewajiban lancar.' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Kepala Bidang Akuntansi dan Pelaporan Keuangan Pemerintah Daerah (PPKD) bersama Tim Penyusun Laporan Keuangan SKPD yang menguasai Standar Akuntansi Pemerintahan (SAP Akrual - PP No. 71 Tahun 2010), Permendagri No. 77 Tahun 2020, dan standar pemeriksaan BPK RI.
+
+Saya sedang menyusun dokumen Catatan atas Laporan Keuangan (CaLK) resmi untuk:
+- Entitas Pelapor: ${f.namaEntitasCalk}
+- Tahun Anggaran & Realisasi: ${f.tahunAnggaranCalk}
+- Pos Belanja LRA & Beban LO:
+${f.posAkunDominan}
+- Kebijakan Akuntansi & Rekonsiliasi Aset:
+${f.kebijakanAsetRekon}
+- Pengungkapan Peristiwa Penting:
+${f.pengungkapanPenting}
+
+Susun draf naskah resmi CaLK SKPD yang komprehensif, logis, dan sinkron berstandar Wajar Tanpa Pengecualian (WTP):
+BAB I: PENDAHULUAN (Maksud dan tujuan penyusunan CaLK, landasan hukum perundang-undangan SAP Akrual, pendekatan penyusunan laporan keuangan, dan sistematika penulisan).
+BAB II: EKONOMI MAKRO, KEBIJAKAN KEUANGAN DAN PENCAPAIAN TARGET KINERJA APBD (Tinjauan indikator ekonomi makro, kebijakan pengelolaan belanja dan pendapatan, serta ringkasan realisasi fisik dan keuangan SKPD).
+BAB III: KEBIJAKAN AKUNTANSI (Basis akuntansi kas menuju akrual, pengakuan pendapatan-LRA, pendapatan-LO, beban, belanja, pengukuran persediaan FIFO/harga pokok terakhir, serta kapitalisasi aset tetap dan metode penyusutan).
+BAB IV: PENJELASAN POS-POS LAPORAN KEUANGAN:
+  A. Penjelasan Pos Laporan Realisasi Anggaran (LRA) - Tabel perbandingan Anggaran vs Realisasi, persentase serapan, dan analisis penyebab varians belanja operasi serta belanja modal.
+  B. Penjelasan Pos Laporan Operasional (LO) - Analisis beban operasional, beban transfer, dan surplus/defisit operasional.
+  C. Penjelasan Pos Laporan Perubahan Ekuitas (LPE) - Ekuitas awal, dampak kumulatif penyesuaian nilai aset, surplus/defisit LO, dan ekuitas akhir.
+  D. Penjelasan Pos Neraca SKPD - Kas di bendahara pengeluaran, piutang, persediaan, rincian Aset Tetap KIB A s.d. F, Konstruksi Dalam Pengerjaan (KDP), akumulasi penyusutan, dan kewajiban jangka pendek.
+BAB V: PENJELASAN ATAS INFORMASI NON-KEUANGAN (Tata kelola internal, pengungkapan komitmen kontraktual tahun jamak, dan status tindak lanjut rekomendasi BPK RI).
+BAB VI: PENUTUP (Kesimpulan dan rekomendasi pengendalian akuntansi internal).
+
+${opts.constraintsPrompt}`
+                    },
+                    {
+                        id: 'keu_lra_varians',
+                        name: 'Analisis Varians Belanja LRA vs LO & Rasio Efisiensi Anggaran',
+                        description: 'Kertas kerja evaluasi realisasi belanja LRA vs beban LO, analisis selisih kurang/lebih (varians anggaran), dan pengukuran efisiensi per program.',
+                        fields: [
+                            { id: 'opdLra', label: 'Nama Satuan Kerja / Dinas Pengelola Anggaran', type: 'text', default: 'Dinas Bina Marga dan Penataan Ruang' },
+                            { id: 'dataPaguRealisasi', label: 'Tabel Pagu Anggaran vs Realisasi per Pos Belanja (Rupiah)', type: 'textarea', default: '1. Belanja Pegawai: Pagu Rp 24.000.000.000,- | Realisasi Rp 23.450.000.000,- (Serapan 97,71%, Selisih Lebih Rp 550 Juta).\n2. Belanja Barang dan Jasa: Pagu Rp 38.500.000.000,- | Realisasi Rp 35.800.000.000,- (Serapan 92,99%, Selisih Lebih Rp 2,7 Miliar).\n3. Belanja Modal Jalan, Jaringan & Irigasi: Pagu Rp 95.000.000.000,- | Realisasi Rp 88.200.000.000,- (Serapan 92,84%, Selisih Lebih Rp 6,8 Miliar).\n4. Belanja Modal Peralatan Mesin: Pagu Rp 12.000.000.000,- | Realisasi Rp 11.600.000.000,- (Serapan 96,67%, Selisih Lebih Rp 400 Juta).' },
+                            { id: 'faktorPenyebabVarians', label: 'Faktor Penyebab Varians (Efisiensi Kontrak vs Hambatan Teknis)', type: 'textarea', default: 'Selisih lebih belanja modal sebesar Rp 6,8 Miliar berasal dari:\n- Efisiensi sisa tender e-katalog dan lelang terbuka (Contract Saving) sebesar Rp 4,5 Miliar tanpa mengurangi volume fisik pekerjaan (output 100% tercapai).\n- Adanya sisa pagu tak terserap sebesar Rp 2,3 Miliar akibat pemutusan kontrak rekanan wanprestasi pada paket pemeliharaan drainase paket 3 yang telah dicairkan jaminan pelaksanaannya.' },
+                            { id: 'rekonLraKeLo', label: 'Jembatan Rekonsiliasi dari Belanja LRA Menuju Beban LO', type: 'textarea', default: 'Belanja modal sebesar Rp 99,8 Miliar tidak diakui sebagai beban di Laporan Operasional (LO), melainkan dikapitalisasi ke Neraca menjadi penambahan aset tetap. Sebaliknya, LO mengakui beban non-kas yaitu Beban Penyusutan Aset Tetap tahun berjalan sebesar Rp 18,2 Miliar dan Beban Pemeliharaan Non-Kapitalisasi sebesar Rp 8,5 Miliar.' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Analis Keuangan Pusat dan Daerah Madya serta Pengawas Keuangan Daerah Inspektorat yang menguasai analisis Laporan Realisasi Anggaran (LRA) dan Laporan Operasional (LO) berpedoman pada SAP Akrual dan Permendagri 77/2020.
+
+Susunkan Dokumen Kertas Kerja Analisis Varians Belanja dan Laporan Evaluasi Efisiensi Anggaran LRA untuk:
+- Entitas: ${f.opdLra}
+- Data Pagu vs Realisasi LRA:
+${f.dataPaguRealisasi}
+- Analisis Faktor Penyebab Varians:
+${f.faktorPenyebabVarians}
+- Rekonsiliasi Akrual LRA ke LO:
+${f.rekonLraKeLo}
+
+Sistematika kertas kerja yang harus Anda rumuskan:
+1. Matriks Rekapitulasi Varians Belanja LRA (Tabel komparatif: Kode Rekening, Uraian Jenis Belanja, Pagu DPA, Realisasi SP2D, Selisih Varians Rp, % Serapan, Kategori: Favorable / Efisiensi vs Unfavorable / Under-spending).
+2. Pembedahan Akar Masalah Varians Belanja (Bedakan secara tajam antara sisa tender efisiensi / contract saving dengan kegagalan penyerapan akibat keterlambatan lelang atau sanggah).
+3. Matriks Jembatan Rekonsiliasi LRA ke LO (Rekonsiliasi belanja modal yang menjadi aset tetap vs belanja operasi yang menjadi beban LO ditambah beban penyusutan non-kas).
+4. Perhitungan Rasio Kinerja Keuangan Daerah: Rasio Efisiensi Belanja dan Rasio Belanja Modal terhadap Total Belanja Daerah.
+5. Rekomendasi Pengendalian Triwulanan untuk Rencana Anggaran Tahun Depan.
+
+${opts.constraintsPrompt}`
+                    },
+                    {
+                        id: 'keu_rekon_aset_kib',
+                        name: 'Rekonsiliasi Aset Tetap KIB (A s.d. F) vs Belanja Modal & Neraca Saldo',
+                        description: 'Kertas kerja uji rekonsiliasi triwulanan/akhir tahun antara belanja modal DPA-LRA dengan penambahan fisik Kartu Inventaris Barang (KIB) dan mutasi neraca.',
+                        fields: [
+                            { id: 'skpdRekonAset', label: 'Nama SKPD & Tim Pengurus Barang Pengguna', type: 'text', default: 'Dinas Perhubungan dan Pengurus Barang Pengguna SKPD' },
+                            { id: 'periodeRekon', label: 'Periode Rekonsiliasi & Aplikasi Aset Daerah', type: 'text', default: 'Rekonsiliasi Tutup Buku Akhir Tahun 2025 (Terintegrasi SIPD-RI & Aplikasi SIMBADA / e-BMD)' },
+                            { id: 'belanjaModalLraData', label: 'Realisasi Belanja Modal pada LRA (Akun 5.2)', type: 'textarea', default: 'Realisasi SP2D-LS Belanja Modal TA 2025: Rp 18.750.000.000,- dengan rincian:\n- Belanja Modal Tanah (5.2.01): Rp 2.500.000.000,-\n- Belanja Modal Peralatan dan Mesin (5.2.02): Rp 6.850.000.000,-\n- Belanja Modal Gedung dan Bangunan (5.2.03): Rp 4.200.000.000,-\n- Belanja Modal Jalan, Jaringan, dan Irigasi (5.2.04): Rp 5.200.000.000,-' },
+                            { id: 'mutasiKibFisik', label: 'Rincian Penambahan Fisik pada Register KIB (A s.d. F)', type: 'textarea', default: 'Penambahan saldo KIB hasil input BAST pengadaan fisik:\n- KIB A (Tanah): 1 bidang tanah terminal seluas 5.000 m2 (Rp 2,5 M).\n- KIB B (Peralatan & Mesin): 12 unit bus sekolah, 45 unit rambu lalu lintas digital, dan server ATCS (Rp 6,85 M).\n- KIB C (Gedung & Bangunan): 1 unit kantor uji KIR (Rp 4,2 M).\n- KIB D (Jalan, Irigasi, Jaringan): Penerangan Jalan Umum (PJU) Smart LED (Rp 4,1 M).\n- KIB F (Konstruksi Dalam Pengerjaan - KDP): Proyek Dermaga yang belum rampung fisik 65% (Rp 1,1 Miliar).' },
+                            { id: 'selisihPenjelasan', label: 'Analisis Selisih, Belanja Modal Non-Aset & Hibah/Transfer', type: 'textarea', default: 'Terdapat selisih Rp 100 Juta antara realisasi belanja modal KIB D (Rp 5,2 M LRA vs Rp 4,1 M KIB D + Rp 1,1 M KDP). Penjelasan: Rp 1,1 Miliar dicatat di KIB F sebagai KDP akhir tahun karena BAST FHO pekerjaan belum terbit per 31 Desember. Tidak ada belanja modal yang tidak memenuhi batas minimal kapitalisasi (ekstrakomtabel).' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Tim Rekonsiliasi Aset Tetap BPKAD bersama Pejabat Penatausahaan Pengguna Barang (PBPB) SKPD yang menguasai Permendagri No. 19 Tahun 2016 tentang Pedoman Pengelolaan BMD dan SAP Buletin Teknis No. 15 tentang Aset Tetap.
+
+Bantu susunkan Dokumen Berita Acara Rekonsiliasi Aset Tetap dan Kertas Kerja Rekonsiliasi KIB vs LRA untuk:
+- SKPD: ${f.skpdRekonAset}
+- Periode Buku: ${f.periodeRekon}
+- Realisasi Belanja Modal LRA:
+${f.belanjaModalLraData}
+- Mutasi Register Fisik KIB A - F:
+${f.mutasiKibFisik}
+- Ulasan Selisih & KDP:
+${f.selisihPenjelasan}
+
+Sajikan naskah resmi paket rekonsiliasi yang bebas temuan audit BPK RI:
+1. Lembar Berita Acara Rekonsiliasi Aset Tetap Resmi (Lengkap dengan konsideran, hari/tanggal, pihak penandatangan dari fungsi akuntansi PPKD dan pengurus barang pengguna SKPD).
+2. Tabel Matriks Uji Silang Rekonsiliasi Belanja Modal LRA vs Register KIB A s.d. F.
+3. Telaah Penentuan Batas Minimal Kapitalisasi (Capitalization Threshold) dan Aset Ekstrakomtabel.
+4. Penanganan Proyek Belum Selesai (KDP - Konstruksi Dalam Pengerjaan KIB F).
+5. Rekomendasi Jurnal Penyesuaian Akuntansi jika ditemukan selisih pencatatan saldo awal aset tetap.
+
+${opts.constraintsPrompt}`
+                    },
+                    {
+                        id: 'keu_verifikasi_spj',
+                        name: 'Kertas Kerja Verifikasi SPJ Bendahara Pengeluaran (UP/GU/TU/LS)',
+                        description: 'Instrumen uji material, formal, bukti pungut/setor pajak NTPN, serta kepatuhan standar biaya masukan (SBM/SSH) atas SPJ belanja daerah.',
+                        fields: [
+                            { id: 'namaOpdSpj', label: 'Nama SKPD & Nama Bendahara Pengeluaran', type: 'text', default: 'Dinas Koperasi, Usaha Kecil Menengah, dan Perdagangan - Bendahara Pengeluaran' },
+                            { id: 'mekanismeSpj', label: 'Jenis Pertanggungjawaban & Nomor Register SPJ', type: 'text', default: 'Surat Pertanggungjawaban Ganti Uang (SPJ-GU Ke-3) TA 2026 - Nilai Pengajuan: Rp 185.450.000,-' },
+                            { id: 'rincianKuitansiSpj', label: 'Rincian Bukti Kuitansi Pengeluaran yang Diuji', type: 'textarea', default: '1. Kuitansi 01: Belanja Alat Tulis Kantor & Kertas ke CV Mitra Sejahtera senilai Rp 18.500.000,- (Nota toko bermeterai, faktur, e-faktur PPN 11%, PPh 22).\n2. Kuitansi 02: Belanja Makanan dan Minuman Rapat Bimtek UMKM 4 angkatan ke Katering Berkah senilai Rp 42.000.000,- (Daftar hadir peserta 120 orang, notulensi rapat, bukti potong PPh 23 2%).\n3. Kuitansi 03: Belanja Pemeliharaan Kendaraan Dinas Operasional 4 unit ke Bengkel Resmi senilai Rp 14.800.000,- (SPK rutin, rincian suku cadang lama diganti, PPh 23).\n4. Kuitansi 04: Belanja Perjalanan Dinas Biasa dalam daerah monitoring pasar senilai Rp 28.650.000,- (Surat Tugas, SPPD berstempel, kuitansi riil bensin & uang harian SBM).\n5. Kuitansi 05: Belanja Jasa Tenaga Ahli Narasumber Pelatihan Ekspor senilai Rp 15.000.000,- (Bukti potong PPh 21 tarif progresif NPWP).' },
+                            { id: 'kepatuhanPajakSsh', label: 'Hasil Pengujian Kepatuhan Pajak (NTPN) & Standar Biaya (SSH)', type: 'textarea', default: 'Semua pemotongan pajak PPh 21, PPh 22, PPh 23, dan PPN telah disetor secara elektronik melalui e-Billing dengan bukti cetak Bukti Penerimaan Negara (BPN) yang memuat Nomor Transaksi Penerimaan Negara (NTPN) sah dari Ditjen Pajak. Satuan harga nasi kotak rapat Rp 40.000 dan snack Rp 18.000 sesuai dengan Keputusan Walikota tentang Standar Satuan Harga (SSH) tahun berjalan.' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Pejabat Penatausahaan Keuangan SKPD (PPK-SKPD) yang memverifikasi dokumen pertanggungjawaban berdasarkan Permendagri No. 77 Tahun 2020 tentang Pedoman Teknis Pengelolaan Keuangan Daerah.
+
+Susunkan Lembar Hasil Verifikasi dan Kertas Kerja Pengujian Dokumen SPJ Bendahara Pengeluaran untuk:
+- SKPD & Bendahara: ${f.namaOpdSpj}
+- Jenis Pengajuan SPJ: ${f.mekanismeSpj}
+- Rincian Kuitansi Uji Petik:
+${f.rincianKuitansiSpj}
+- Kepatuhan Pajak & SSH:
+${f.kepatuhanPajakSsh}
+
+Dokumen verifikasi resmi yang harus Anda sajikan mencakup:
+1. Lembar Verifikasi Formal dan Material Bukti Pengeluaran.
+2. Matriks Pengujian Kewajaran Harga terhadap SSH/SBM Daerah.
+3. Matriks Rekonsiliasi Pajak Pusat dan Daerah (PPh 21/22/23, PPN 11%, Pajak Restoran PBJT 10%, Kode Billing, NTPN).
+4. Catatan Kritis Penguji.
+5. Draf Format Surat Pengesahan SPJ (SPJ-Pengesahan) dari Pengguna Anggaran.
+
+${opts.constraintsPrompt}`
+                    },
+                    {
+                        id: 'keu_setwan_hak_keuangan',
+                        name: 'SPJ Hak Keuangan & Administratif DPRD Prov. Kalteng (PP 18/2017)',
+                        description: 'Verifikasi pertanggungjawaban TKI, Tunjangan Perumahan appraisal, Transportasi, Reses & BOP Pimpinan DPRD Provinsi Kalteng.',
+                        fields: [
+                            { id: 'pejabatSetwan', label: 'Pejabat Penatausahaan Keuangan (PPK-SKPD) / Pengguna Anggaran', type: 'text', default: 'Sekretariat DPRD Provinsi Kalimantan Tengah (Jl. S. Parman No. 2, Palangka Raya)' },
+                            { id: 'pimpinanAnggota', label: 'Jumlah Pimpinan & Anggota Dewan yang Diproses', type: 'text', default: '45 Orang Anggota DPRD Provinsi Kalimantan Tengah (Ketua, 3 Wakil Ketua, dan 41 Anggota)' },
+                            { id: 'periodeBuku', label: 'Masa / Bulan Pembayaran & Dokumen Anggaran', type: 'text', default: 'Masa Pembayaran Bulan Mei 2026 - DPA-SKPD Sekretariat DPRD Provinsi Kalteng TA 2026' },
+                            { id: 'komponenHak', label: 'Rincian Komponen Hak Keuangan & Standar Perda Kalteng', type: 'textarea', default: '1. Uang Representasi, Tunjangan Keluarga & Tunjangan Beras.\n2. Tunjangan Jabatan Pimpinan & Anggota.\n3. Tunjangan Komunikasi Intensif (TKI): Kategori Kemampuan Keuangan Daerah (KKD) Tinggi (7x Uang Representasi Ketua).\n4. Tunjangan Perumahan: Pimpinan & Anggota berdasarkan hasil penilaian KJPP appraisal independen terkini yang ditetapkan dengan Pergub Kalteng.\n5. Tunjangan Transportasi bagi anggota yang tidak mendapat kendaraan dinas jabatan.\n6. Dana Operasional Pimpinan DPRD (BOP Pimpinan) dengan pertanggungjawaban 80% lumpsum dan 20% at-cost/kuitansi.' },
+                            { id: 'dokumenPenguji', label: 'Dokumen Penguji Keabsahan & Pemotongan Pajak', type: 'textarea', default: 'Daftar pembayaran transfer langsung (SP2D LS), bukti potong PPh Pasal 21 Final 15% atas TKI dan Tunjangan Operasional, kepatuhan batas maksimal tunjangan perumahan/transportasi tidak melebihi standar hak keuangan DPRD provinsi setingkat, serta surat pernyataan tanggung jawab mutlak (SPTJM) Pengguna Anggaran.' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Pejabat Penatausahaan Keuangan (PPK-SKPD) dan Bendahara Pengeluaran Sekretariat DPRD Provinsi Kalimantan Tengah yang menguasai PP No. 18 Tahun 2017 tentang Hak Keuangan dan Administratif Pimpinan dan Anggota DPRD, Permendagri No. 77 Tahun 2020, Perda Kalteng, serta standar pengujian BPK RI.
+
+Saya sedang memverifikasi dan menyusun berkas pertanggungjawaban (SPJ) Hak Keuangan dan Administratif Pimpinan serta Anggota DPRD Provinsi Kalimantan Tengah:
+- Instansi: ${f.pejabatSetwan}
+- Penerima Hak: ${f.pimpinanAnggota}
+- Periode Pembayaran: ${f.periodeBuku}
+- Komponen Hak Keuangan:
+${f.komponenHak}
+- Verifikasi Bukti & Pajak:
+${f.dokumenPenguji}
+
+Tolong susunkan draf paket dokumen verifikasi dan pengesahan SPJ resmi yang akuntabel dan bebas temuan audit BPK RI:
+1. Lembar Verifikasi Kelayakan Administratif & Material Pembayaran Hak Keuangan DPRD (Tabel checklist kriteria PP 18/2017).
+2. Matriks Rincian Pembayaran Per Fraksi/Komisi.
+3. Analisis Kepatuhan Pajak Penghasilan (PPh Pasal 21 Final 15%) dan Validasi NTPN Penyetoran.
+4. Telaahan Kepatuhan Batas Kewajaran Tunjangan Perumahan dan Transportasi berdasarkan laporan KJPP terkini.
+5. Format Surat Pernyataan Tanggung Jawab Mutlak (SPTJM) Sekretaris DPRD Provinsi Kalimantan Tengah selaku Pengguna Anggaran.
+
+${opts.constraintsPrompt}`
+                    },
+                    {
+                        id: 'keu_setwan_reses_dapil',
+                        name: 'Pertanggungjawaban Keuangan Reses DPRD Kalteng (Dapil I - V)',
+                        description: 'Verifikasi SPJ kegiatan reses pimpinan/anggota dewan menjaring aspirasi konstituen, sewa gedung, konsumsi, dan Pokir ke SIPD.',
+                        fields: [
+                            { id: 'namaAnggotaDprd', label: 'Nama Pimpinan / Anggota Dewan & Komisi', type: 'text', default: 'Ir. H. Budi Santoso, MT - Komisi II (Bidang Perekonomian & Sumber Daya Alam) DPRD Prov. Kalteng' },
+                            { id: 'dapilKalteng', label: 'Daerah Pemilihan (Dapil) Kalteng & Masa Sidang', type: 'text', default: 'Dapil Kalteng I (Kota Palangka Raya, Kabupaten Katingan, Kabupaten Gunung Mas) - Reses Masa Persidangan I TA 2026' },
+                            { id: 'titikKunjungan', label: 'Lokasi Titik Pertemuan Konstituen & Jadwal Pelaksanaan', type: 'textarea', default: '8 Titik Pertemuan: Kelurahan Pahandut (Palangka Raya), Desa Kasongan Lama & Desa Kereng Pangi (Katingan), serta Desa Tewah & Kelurahan Kuala Kurun (Gunung Mas). Durasi: 8 hari kalender.' },
+                            { id: 'paguRencanaReses', label: 'Pagu Anggaran & Rincian Belanja Kegiatan Reses', type: 'textarea', default: 'Pagu per Anggota Rp 78.500.000,- dialokasikan untuk:\n1. Tunjangan Reses (transfer rekening dipotong PPh 21).\n2. Belanja Sewa Gedung Pertemuan / Tenda & Sound System (8 titik x Rp 2.500.000 = Rp 20 Juta).\n3. Belanja Makan dan Kudapan/Snack Konstituen (8 titik x 75 warga x Rp 45.000 = Rp 27 Juta).\n4. Belanja ATK & Penggandaan Materi Aspirasi (Rp 4.500.000).\n5. Transportasi dan akomodasi pendamping staf Sekretariat DPRD.' },
+                            { id: 'kelengkapanLaporan', label: 'Bukti Fisik, Administrasi & Sinkronisasi Pokir', type: 'textarea', default: 'Daftar hadir bertandatangan asli NIK/kontak, notulensi dialog aspirasi warga, dokumentasi foto berstempel waktu (geotagging GPS), kuitansi penyedia katering ber-NPWP/meterai, serta draf matriks Pokok Pikiran (Pokir) yang telah divalidasi ke SIPD-RI Pemprov Kalteng.' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Tim Verifikasi Keuangan Bagian Persidangan dan Perundang-undangan bersama PPK-SKPD Sekretariat DPRD Provinsi Kalimantan Tengah.
+
+Susun Dokumen Laporan Pengujian dan Pertanggungjawaban Keuangan (SPJ) Pelaksanaan Reses DPRD Provinsi Kalimantan Tengah untuk:
+- Anggota Dewan: ${f.namaAnggotaDprd}
+- Daerah Pemilihan: ${f.dapilKalteng}
+- Titik Kunjungan Lapangan:
+${f.titikKunjungan}
+- Alokasi Anggaran Belanja Reses:
+${f.paguRencanaReses}
+- Bukti Fisik & Laporan Pokir:
+${f.kelengkapanLaporan}
+
+Dokumen pertanggungjawaban resmi yang harus Anda susun meliputi:
+1. Lembar Verifikasi Keabsahan Dokumen SPJ Belanja Reses.
+2. Format Rekapitulasi Rincian Riil Pengeluaran Reses per Titik Pertemuan.
+3. Berita Acara Rekonsiliasi Pelaksanaan Reses.
+4. Format Ringkasan Eksekutif Matriks Aspirasi Pokok Pikiran (Pokir) DPRD Kalteng hasil reses yang siap diintegrasikan ke SIPD Provinsi Kalimantan Tengah.
+
+${opts.constraintsPrompt}`
+                    }
+                ]
+            },
+
+            // KATEGORI 1: PERENCANAAN DAERAH & SAKIP (RENJA, RENSTRA, LAKIP/LKjIP)
+            {
+                categoryKey: 'perencanaan_sakip',
+                categoryName: 'Perencanaan & SAKIP (Renja, Renstra, LAKIP)',
+                categoryIcon: '🎯',
+                templates: [
+                    {
+                        id: 'sakip_renja_pd',
+                        name: 'Penyusunan Rencana Kerja (Renja) SKPD / Perangkat Daerah (Permendagri 86/2017)',
+                        description: 'Matriks program, kegiatan, sub kegiatan, indikator outcome/output, target, pagu indikatif, dan evaluasi hasil Renja tahun lalu.',
+                        fields: [
+                            { id: 'namaDinasRenja', label: 'Nama Perangkat Daerah / SKPD', type: 'text', default: 'Dinas Komunikasi, Informatika, Persandian, dan Statistik' },
+                            { id: 'tahunRencana', label: 'Tahun Rencana Renja & Rujukan Renstra', type: 'text', default: 'Tahun Anggaran 2026 (Menjabarkan Tahun Ke-2 Renstra 2025-2029)' },
+                            { id: 'sasaranStrategis', label: 'Sasaran Strategis Perangkat Daerah & IKU', type: 'textarea', default: 'Meningkatnya Keterpaduan SPBE dan Keamanan Informasi Daerah dengan Indeks SPBE target 3.85 (Sangat Baik) dan Indeks Kepuasan Layanan Informasi Publik (IKP) target 88.50.' },
+                            { id: 'programKegiatanPagu', label: 'Rincian Program Prioritas, Sub Kegiatan & Pagu Indikatif', type: 'textarea', default: '1. Program Pengelolaan Informasi dan Komunikasi Publik (Pagu Rp 3,2 Miliar) - Sub Kegiatan Pengelolaan Saluran Informasi Pemda & Kemitraan Media.\n2. Program Aplikasi Informatika & SPBE (Pagu Rp 6,8 Miliar) - Sub Kegiatan Integrasi Data Satu Data Indonesia, Perluasan Bandwidth Kecamatan, dan Penguatan SOC CSIRT Keamanan Siber.\n3. Program Penunjang Urusan Pemerintahan Daerah (Pagu Rp 4,5 Miliar) - Gaji, operasional kantor, dan pemeliharaan server.' },
+                            { id: 'evaluasiRenjaLalu', label: 'Hasil Evaluasi Capaian Renja Tahun Berjalan (Kendala & Solusi)', type: 'textarea', default: 'Realisasi keuangan tahun lalu mencapai 94,80% dan kinerja fisik 97,20%. Kendala utama: keterlambatan penetapan lokasi titik blankspot jaringan di wilayah terluar dan keterbatasan SDM tersertifikasi cybersecurity. Solusi: pengadaan katalog elektronik lebih awal pada triwulan I dan fasilitasi diklat teknis ASN CSIRT bekerja sama dengan BSSN.' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Perencana Ahli Madya pada Bappeda dan Kepala Sub Bagian Penyusunan Program SKPD yang menguasai Permendagri No. 86 Tahun 2017 tentang Tata Cara Perencanaan, Pengendalian dan Evaluasi Pembangunan Daerah.
+
+Saya sedang menyusun dokumen resmi Rencana Kerja (Renja) Perangkat Daerah:
+- Nama Perangkat Daerah: ${f.namaDinasRenja}
+- Tahun Perencanaan: ${f.tahunRencana}
+- Sasaran Strategis & IKU: ${f.sasaranStrategis}
+- Rincian Program, Kegiatan, dan Pagu Indikatif:
+${f.programKegiatanPagu}
+- Bahan Evaluasi Kinerja Renja Sebelumnya:
+${f.evaluasiRenjaLalu}
+
+Tolong susun draf dokumen Renja Perangkat Daerah resmi yang komprehensif, logis, dan sinkron dengan Permendagri 86/2017:
+BAB I: PENDAHULUAN (Latar belakang, landasan hukum perundang-undangan perencanaan daerah, maksud dan tujuan, serta sistematika penulisan).
+BAB II: EVALUASI PELAKSANAAN RENJA TAHUN LALU.
+BAB III: TUJUAN, SASARAN, PROGRAM DAN KEGIATAN PERANGKAT DAERAH.
+BAB IV: MATRIKS RENCANA KERJA DAN PENDANAAN (Tabel format resmi Tabel TC-33 Permendagri 86/2017).
+BAB V: PENUTUP (Rekomendasi kaidah pelaksanaan dan pengendalian berkala).
+
+${opts.constraintsPrompt}`
+                    },
+                    {
+                        id: 'sakip_lakip_lkjip',
+                        name: 'Penyusunan LAKIP / LKjIP (Laporan Kinerja Instansi Pemerintah)',
+                        description: 'Laporan akuntabilitas kinerja tahunan berstandar SAKIP PermenPANRB 53/2014 & 88/2021: analisis capaian IKU, efisiensi anggaran, dan evaluasi.',
+                        fields: [
+                            { id: 'entitasLakip', label: 'Nama Instansi / Dinas / Perangkat Daerah', type: 'text', default: 'Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu (DPMPTSP)' },
+                            { id: 'tahunAnggaranLakip', label: 'Tahun Laporan & Predikat AKIP Terakhir', type: 'text', default: 'Laporan Kinerja Tahun Anggaran 2025 (Nilai Evaluasi SAKIP Tahun Sebelumnya: 74,50 Kategori BB)' },
+                            { id: 'capaianIkuData', label: 'Daftar Indikator Kinerja Utama (IKU), Target vs Realisasi', type: 'textarea', default: '1. IKU 1: Realisasi Nilai Investasi (PMA & PMDN) - Target: Rp 4,50 Triliun | Realisasi: Rp 4,92 Triliun (Capaian: 109,33%).\n2. IKU 2: Indeks Kepuasan Masyarakat (IKM) Pelayanan Perizinan - Target: 86,00 (Baik) | Realisasi: 88,40 (Sangat Baik, Capaian: 102,79%).\n3. IKU 3: Waktu Rata-rata Pemrosesan Izin Berusaha Berbantuan OSS - Target: 3 Hari Kerja | Realisasi: 2,4 Hari Kerja (Capaian: 125,00%).\n4. IKU 4: Tingkat Kepatuhan Pelaporan LKPM Pelaku Usaha - Target: 75,00% | Realisasi: 71,20% (Capaian: 94,93% - Belum mencapai target).' },
+                            { id: 'alokasiSerapanAnggaran', label: 'Alokasi Pagu & Realisasi Anggaran Pendukung Kinerja', type: 'textarea', default: 'Pagu DPA TA 2025: Rp 12.800.000.000,- | Realisasi Belanja: Rp 11.950.000.000,- (Persentase Serapan: 93,36%). Terjadi efisiensi belanja operasional dan perjalanan dinas sebesar Rp 850 Juta tanpa mengurangi pencapaian target output layanan izin.' },
+                            { id: 'analisisFaktorKinerja', label: 'Analisis Faktor Pendorong, Kendala & Inovasi Layanan', type: 'textarea', default: 'Pendorong: Penerapan klinik asistensi LKPM daring, mobil layanan izin keliling kecamatan, dan integrasi tanda tangan elektronik BSrE. Kendala pada IKU 4: Masih banyak UMKM skala mikro yang belum memahami pelaporan daring LKPM. Inovasi: Program Jemput Bola Pendampingan LKPM Terpadu bersama perbankan daerah.' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Tim Penyusun Laporan Kinerja Instansi Pemerintah (LKjIP / LAKIP) dan Tenaga Ahli SAKIP berpedoman pada PermenPANRB No. 53 Tahun 2014 dan PermenPANRB No. 88 Tahun 2021.
+
+Saya sedang menyusun dokumen LAKIP / LKjIP resmi untuk:
+- Entitas: ${f.entitasLakip}
+- Tahun Laporan: ${f.tahunAnggaranLakip}
+- Capaian IKU Target vs Realisasi:
+${f.capaianIkuData}
+- Realisasi Keuangan & Efisiensi:
+${f.alokasiSerapanAnggaran}
+- Analisis Kendala & Inovasi:
+${f.analisisFaktorKinerja}
+
+Susun draf naskah resmi LAKIP / LKjIP berpredikat A dengan sistematika standar KemenPAN-RB:
+RINGKASAN EKSEKUTIF
+BAB I: PENDAHULUAN
+BAB II: PERENCANAAN KINERJA
+BAB III: AKUNTABILITAS KINERJA (Analisis Capaian Kinerja Sasaran dan IKU, Ulasan Mendalam per Indikator, Analisis Efisiensi Penggunaan Sumber Daya, dan Perbandingan Kinerja).
+BAB IV: PENUTUP & RENCANA AKSI PERBAIKAN TAHUN DEPAN.
+
+${opts.constraintsPrompt}`
+                    },
+                    {
+                        id: 'sakip_cascading_pohon',
+                        name: 'Pohon Kinerja & Matriks Cascading Kinerja (PermenPANRB 89/2021)',
+                        description: 'Penjenjangan kinerja logis dari sasaran kepala daerah ke Ultimate Outcome, Intermediate, hingga Output Subkegiatan/Individu.',
+                        fields: [
+                            { id: 'instansiPohon', label: 'Nama Perangkat Daerah / Satker', type: 'text', default: 'Dinas Pekerjaan Umum, Penataan Ruang, dan Kawasan Permukiman' },
+                            { id: 'sasaranRpjmdPohon', label: 'Sasaran Strategis Kepala Daerah (RPJMD) yang Diampu', type: 'text', default: 'Meningkatnya Kualitas dan Pemerataan Konektivitas Infrastruktur Daerah yang Berkelanjutan dan Tanggap Bencana' },
+                            { id: 'ultimateOutcome', label: 'Sasaran Strategis Perangkat Daerah (Kepala Dinas / JPT Pratama)', type: 'textarea', default: 'Tersedianya Jaringan Jalan, Jembatan, dan Drainase Perkotaan dalam Kondisi Mantap dan Bebas Genangan (IKU: Persentase Jalan Kabupaten dalam Kondisi Mantap target 82,50% & Persentase Titik Genangan Air yang Tertangani target 90,00%).' },
+                            { id: 'intermediateOutcome', label: 'Kinerja Bidang / Eselon III (Intermediate Outcome)', type: 'textarea', default: '1. Bidang Bina Marga: Meningkatnya Kemantapan Struktur dan Kapasitas Jalan serta Jembatan Strategis.\n2. Bidang Sumber Daya Air & Cipta Karya: Meningkatnya Kapasitas Saluran Primer dan Sekunder Drainase Terpadu.\n3. Bidang Tata Ruang: Meningkatnya Kesesuaian Pemanfaatan Ruang Koridor Infrastruktur.' },
+                            { id: 'immediateOutput', label: 'Kinerja Sub-Kegiatan / Eselon IV / Ketua Tim Kerja (Immediate Outcome & Output)', type: 'textarea', default: 'Sub Kegiatan Rekonstruksi Jalan Poros Antar-Kecamatan (Output: 24,5 KM jalan hotmix), Sub Kegiatan Normalisasi Sungai dan Saluran Primer (Output: 18 KM saluran drainase), dan Sub Kegiatan Pengawasan Mutu Konstruksi (Output: 100% uji lab kuat tekan beton memenuhi spek).' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Asesor Akuntabilitas Kinerja dan Analis Kebijakan Madya KemenPAN-RB / Bappeda yang menguasai PermenPANRB No. 89 Tahun 2021 tentang Penjenjangan Kinerja (Pohon Kinerja).
+
+Bantu susunkan Dokumen Pohon Kinerja (Cascading Kinerja) dan Matriks Penjenjangan Kinerja Berjenjang resmi untuk:
+- Instansi: ${f.instansiPohon}
+- Mandat Sasaran RPJMD: ${f.sasaranRpjmdPohon}
+- Level 1 (Ultimate Outcome - Kepala Dinas): ${f.ultimateOutcome}
+- Level 2 (Intermediate Outcome - Kepala Bidang):
+${f.intermediateOutcome}
+- Level 3 & 4 (Immediate Outcome & Output - Sub Koordinator/Ketua Tim Kerja):
+${f.immediateOutput}
+
+Tolong rumuskan naskah telaah penjenjangan kinerja komprehensif:
+1. Diagram Naratif Struktur Hierarki Pohon Kinerja (Logika Cause-Effect).
+2. Matriks Penjenjangan Kinerja Lengkap (Level Kinerja, Uraian Kinerja, Indikator, Target, Formulasi, Sumber Data, Penanggung Jawab).
+3. Analisis Hubungan Logis Antar-Level.
+4. Pemetaan Kinerja Lintas Sektor (Cross-Cutting).
+5. Penyelarasan ke Matriks Peran Hasil (MPH) SKP Pegawai.
+
+${opts.constraintsPrompt}`
+                    }
+                ]
+            },
+
+            // KATEGORI 2: PENGADAAN BARANG/JASA PEMERINTAH (LKPP / PERPRES)
+            {
+                categoryKey: 'barjas',
+                categoryName: 'Barjas Pemerintah (LKPP)',
+                categoryIcon: '🏛️',
+                templates: [
+                    {
+                        id: 'barjas_kak_barang',
+                        name: 'KAK Pengadaan Barang / Peralatan Standar',
+                        description: 'Kerangka Acuan Kerja resmi untuk paket pengadaan barang komersial/IT sesuai Perpres PBJ.',
+                        fields: [
+                            { id: 'satker', label: 'Nama Instansi / OPD / Satker', type: 'text', default: 'Dinas Komunikasi, Informatika, dan Persandian Kota Palangka Raya' },
+                            { id: 'paket', label: 'Nama Paket Pengadaan', type: 'text', default: 'Pengadaan & Pemasangan Jaringan Sistem Kamera Pemantau (CCTV Terpadu Smart City Tahap II)' },
+                            { id: 'pagu', label: 'Pagu Anggaran & Sumber Dana', type: 'text', default: 'Rp 850.000.000,- (Delapan Ratus Lima Puluh Juta Rupiah) - DPA APBD TA 2026' },
+                            { id: 'waktu', label: 'Jangka Waktu Pelaksanaan', type: 'text', default: '90 (sembilan puluh) hari kalender' },
+                            { id: 'lokasi', label: 'Lokasi Pekerjaan', type: 'text', default: '15 Titik Simpang Utama & Command Center Kota Palangka Raya' },
+                            { id: 'ruangLingkup', label: 'Ruang Lingkup Pekerjaan Utama', type: 'textarea', default: 'Penyediaan 30 unit kamera PTZ outdoor optical zoom 32x, penarikan kabel fiber optic 4.5 KM, pemasangan tiang oktagonal, instalasi NVR 64-channel, integrasi VMS ke dashboard eksisting, dan pelatihan 10 staf admin.' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Pejabat Pembuat Komitmen (PPK) bersertifikat keahlian Pengadaan Barang dan Jasa Pemerintah tingkat Madya sesuai regulasi LKPP dan Perpres Pengadaan Barang/Jasa Pemerintah terbaru.
+
+Saya ingin menyusun dokumen Kerangka Acuan Kerja (KAK / Term of Reference) yang komprehensif, akuntabel, dan siap diverifikasi oleh APIP/Inspektorat serta siap diunggah ke SPSE/Katalog Elektronik.
+
+Informasi Paket Pengadaan:
+1. Instansi/Satker: ${f.satker}
+2. Nama Paket Pekerjaan: ${f.paket}
+3. Pagu Anggaran & Sumber Dana: ${f.pagu}
+4. Jangka Waktu Pelaksanaan: ${f.waktu}
+5. Lokasi Pekerjaan: ${f.lokasi}
+6. Ruang Lingkup: ${f.ruangLingkup}
+
+Tolong susun draf dokumen KAK resmi dengan sistematika baku pengadaan pemerintah:
+BAB I: LATAR BELAKANG
+BAB II: MAKSUD, TUJUAN, DAN SASARAN
+BAB III: RUANG LINGKUP & SPESIFIKASI UMUM
+BAB IV: TEMPAT DAN JADWAL TAHAPAN PELAKSANAAN
+BAB V: KUALIFIKASI PENYEDIA & PERSYARATAN TENAGA AHLI / TEKNIS
+BAB VI: KELUARAN (OUTPUT) & STANDAR MUTU YANG DITERIMA
+BAB VII: TATA CARA PEMBAYARAN & PERSYARATAN PENYERAHAN PEKERJAAN (BAST, PHO, buku manual, garansi on-site).
+
+${opts.constraintsPrompt}`
+                    },
+                    {
+                        id: 'barjas_kak_konstruksi',
+                        name: 'KAK Pekerjaan Konstruksi Fisik & Keselamatan K3',
+                        description: 'KAK pekerjaan konstruksi gedung/jaringan, dokumen SMKK K3, kurva S, dan jaminan pelaksanaan.',
+                        fields: [
+                            { id: 'instansiKonst', label: 'Satuan Kerja / Pengguna Anggaran', type: 'text', default: 'Dinas Pekerjaan Umum dan Penataan Ruang (PUPR) Kota Palangka Raya' },
+                            { id: 'namaPaketKonst', label: 'Nama Paket Pekerjaan Konstruksi', type: 'text', default: 'Pembangunan Gedung Laboratorium Kesehatan Daerah (Labkesda) 2 Lantai Standar BSL-2' },
+                            { id: 'paguKonst', label: 'Pagu Anggaran & HPS', type: 'text', default: 'Pagu Rp 4.750.000.000,- | HPS Rp 4.620.000.000,- (DAK Fisik Bidang Kesehatan TA 2026)' },
+                            { id: 'waktuKonst', label: 'Waktu Pelaksanaan & Masa Pemeliharaan', type: 'text', default: '180 (seratus delapan puluh) hari kalender, masa pemeliharaan 180 hari' },
+                            { id: 'syaratK3', label: 'Ketentuan Sistem Manajemen Keselamatan Konstruksi (SMKK)', type: 'textarea', default: 'Wajib menerapkan SMKK sesuai Permen PUPR No. 10/2021, menyediakan 1 Ahli K3 Konstruksi Madya, rincian biaya penerapan SMKK tersendiri pada daftar kuantitas dan harga, serta jaminan asuransi CAR (Contractor All Risks).' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Pejabat Pembuat Komitmen (PPK) Bidang Pekerjaan Konstruksi Pemerintah LKPP.
+
+Susunkan Kerangka Acuan Kerja (KAK) Pekerjaan Konstruksi Fisik resmi untuk:
+- Instansi: ${f.instansiKonst}
+- Nama Paket: ${f.namaPaketKonst}
+- Pagu & HPS: ${f.paguKonst}
+- Durasi & Pemeliharaan: ${f.waktuKonst}
+- Penerapan SMKK K3: ${f.syaratK3}
+
+Sistematika KAK Konstruksi yang wajib dimuat:
+1. Landasan Hukum & Urgensi Pembangunan Fisik.
+2. Lingkup Pekerjaan Fisik (Persiapan, Struktur Bawah/Atas, Arsitektur, MEP).
+3. Jadwal Pelaksanaan & Kewajiban Penyampaian Jadwal Kurva S Rinci.
+4. Persyaratan Personil Manajerial dan Peralatan Utama.
+5. Penerapan Rencana Keselamatan Konstruksi (RKK) & Rincian SMKK.
+6. Ketentuan Penyerahan Pertama (PHO), Masa Pemeliharaan, dan Penyerahan Akhir (FHO).
+
+${opts.constraintsPrompt}`
+                    }
+                ]
+            },
+
+            // KATEGORI 3: KEPEGAWAIAN ASN, PPPK & SKP (BKN / KEMENPANRB)
+            {
+                categoryKey: 'kepegawaian_asn',
+                categoryName: 'Kepegawaian ASN & SKP (BKN / KemenPANRB)',
+                categoryIcon: '👔',
+                templates: [
+                    {
+                        id: 'asn_skp_permenpan6',
+                        name: 'Penyusunan SKP & Matriks Peran Hasil (PermenPANRB 6/2022)',
+                        description: 'Perumusan Rencana Kinerja Utama (RKU), Indikator Kinerja Individu (IKI) kuantitatif, dan ekspektasi perilaku BerAKHLAK.',
+                        fields: [
+                            { id: 'jabatanAsn', label: 'Jabatan & Instansi Pegawai', type: 'text', default: 'Analis Kebijakan Ahli Muda - Badan Perencanaan Pembangunan Daerah' },
+                            { id: 'kinerjaAtasanLangsung', label: 'Rencana Kinerja Atasan Langsung (Eselon II/III) yang Diintervensi', type: 'textarea', default: 'Meningkatnya Kualitas Dokumen Perencanaan dan Pengendalian Pembangunan Daerah Bidang Perekonomian dan SDA dengan Nilai Evaluasi Renja 88,50.' },
+                            { id: 'rkuIndividu', label: 'Rencana Kinerja Utama (RKU) Pegawai', type: 'textarea', default: 'Tersusunnya Dokumen Evaluasi Triwulanan RKPD Bidang Sumber Daya Alam, Kajian Analisis Kelayakan Investasi Daerah, dan Rekomendasi Pengendalian Inflasi Pangan.' },
+                            { id: 'aspekIkiPegawai', label: 'Target Aspek Kuantitas, Kualitas, dan Waktu', type: 'textarea', default: 'Kuantitas: 4 Laporan Evaluasi Triwulanan dan 2 Naskah Kebijakan | Kualitas: 100% sesuai standar Bappeda | Waktu: Tepat waktu sebelum akhir bulan penutupan triwulan (12 bulan).' },
+                            { id: 'perilakuBerakhlak', label: 'Ekspektasi Khusus Pimpinan (Core Values BerAKHLAK)', type: 'textarea', default: 'Berorientasi Pelayanan: Cepat tanggap memberikan asistensi teknis kepada SKPD mitra. Kolaboratif: Aktif berkoordinasi lintas OPD dalam tim pengendalian inflasi daerah (TPID).' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Asesor Kinerja ASN dan Analis SDM Aparatur Ahli Madya BKN / KemenPANRB yang menguasai PermenPANRB No. 6 Tahun 2022 tentang Pengelolaan Kinerja Pegawai ASN.
+
+Susun Format Dokumen Sasaran Kinerja Pegawai (SKP) Pendekatan Kuantitatif resmi untuk:
+- Jabatan Pegawai: ${f.jabatanAsn}
+- Intervensi Kinerja Atasan: ${f.kinerjaAtasanLangsung}
+- Rencana Kinerja Utama (RKU): ${f.rkuIndividu}
+- Target IKI (Kuantitas, Kualitas, Waktu):
+${f.aspekIkiPegawai}
+- Ekspektasi Khusus Perilaku:
+${f.perilakuBerakhlak}
+
+Sistematika dokumen SKP yang harus dihasilkan:
+1. Matriks Kinerja Utama (Tabel: Rencana Kinerja Atasan yang Diintervensi, Rencana Kinerja Utama, Aspek IKI, Indikator Kinerja Individu, Target Tahunan).
+2. Lampiran Sumber Daya, Skema Pertanggungjawaban, dan Konsekuensi Kinerja.
+3. Matriks Perilaku Kerja ASN BerAKHLAK (7 Nilai Dasar: Berorientasi Pelayanan, Akuntabel, Kompeten, Harmonis, Loyal, Adaptif, Kolaboratif dengan Ekspektasi Khusus Pimpinan).
+
+${opts.constraintsPrompt}`
+                    },
+                    {
+                        id: 'asn_evaluasi_triwulan',
+                        name: 'Evaluasi Kinerja Periodik Triwulanan & Umpan Balik Berkelanjutan',
+                        description: 'Format penilaian kinerja periodik triwulan, pembuktian eviden, catatan dialog kinerja pimpinan, dan kuadran kinerja.',
+                        fields: [
+                            { id: 'namaJabatanTriwulan', label: 'Nama Pegawai & Jabatan', type: 'text', default: 'Ahmad Faisal, S.AP - Pengelola Pengadaan Barang/Jasa Pertama' },
+                            { id: 'periodeTriwulan', label: 'Periode Evaluasi Triwulan & Tahun', type: 'text', default: 'Triwulan II (April - Juni 2026)' },
+                            { id: 'capaianRealisasiEviden', label: 'Realisasi Capaian Kinerja Utama & Bukti Dukung (Eviden)', type: 'textarea', default: '1. RKU Pengelolaan Dokumen Tender: Target 8 paket, Realisasi 9 paket selesai tender e-katalog (112,5%). Bukti dukung: Tautan link folder e-Katalog dan Berita Acara Penetapan Pemenang.\n2. RKU Penyusunan Berita Acara Hasil Pemilihan: Target 8 berkas, Realisasi 8 berkas tuntas tepat waktu 100%.' },
+                            { id: 'catatanUmpanBalik', label: 'Umpan Balik Berkelanjutan dari Pejabat Penilai Kinerja', type: 'textarea', default: 'Pimpinan mengapresiasi kecepatan penyelesaian tender tanpa ada sanggahan yang terbukti. Perlu ditingkatkan ketelitian pengarsipan digital pada aplikasi SPSE.' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Pejabat Penilai Kinerja (Atasan Langsung) bersama Analis Kepegawaian BKN.
+
+Susun Format Form Evaluasi Kinerja Periodik Triwulanan resmi berdasar PermenPANRB No. 6 Tahun 2022:
+- Pegawai: ${f.namaJabatanTriwulan}
+- Periode: ${f.periodeTriwulan}
+- Realisasi & Bukti Dukung:
+${f.capaianRealisasiEviden}
+- Catatan Umpan Balik:
+${f.catatanUmpanBalik}
+
+Sajikan naskah evaluasi lengkap:
+1. Tabel Evaluasi Kinerja Periodik Pegawai (RKU, Indikator, Target Triwulan, Realisasi Berdasarkan Bukti Dukung, Umpan Balik Berkelanjutan Berdasarkan Bukti Dukung dengan emotikon respon pimpinan).
+2. Evaluasi Perilaku Kerja BerAKHLAK Triwulanan.
+3. Penetapan Pola Kuadran Kinerja Pegawai (Rating Hasil Kerja: Di Atas Ekspektasi / Sesuai Ekspektasi / Di Bawah Ekspektasi; Rating Perilaku Kerja; Predikat Kinerja Periodik).
+
+${opts.constraintsPrompt}`
+                    }
+                ]
+            },
+
+            // KATEGORI 4: REKAYASA PERANGKAT LUNAK & TEKNOLOGI
+            {
+                categoryKey: 'software_engineering',
+                categoryName: 'Rekayasa Perangkat Lunak & API',
+                categoryIcon: '💻',
+                templates: [
+                    {
+                        id: 'sw_prd_gherkin',
+                        name: 'Dokumen Kebutuhan Produk (PRD) Berstandar BDD Gherkin',
+                        description: 'Spesifikasi kebutuhan perangkat lunak komprehensif, arsitektur teknis, matriks peran, dan skenario pengujian Gherkin.',
+                        fields: [
+                            { id: 'namaAplikasi', label: 'Nama Modul / Sistem Aplikasi', type: 'text', default: 'Sistem Integrasi SPJ Elektronik (e-SPJ) dan Validasi Pajak NTPN' },
+                            { id: 'latarBelakangMasalah', label: 'Masalah Bisnis / Operasional yang Diselesaikan', type: 'textarea', default: 'Proses verifikasi manual berkas SPJ bendahara sering mengalami keterlambatan 14 hari, rentan terhadap kuitansi ganda, dan validasi kode NTPN bukti potong pajak Ditjen Pajak belum terverifikasi secara otomatis (real-time API).' },
+                            { id: 'fiturUtamaSistem', label: 'Daftar Fitur Inti yang Harus Dibangun', type: 'textarea', default: '1. Unggah berkas kuitansi digital dengan ekstraksi OCR otomatis.\n2. Verifikasi otomatis keabsahan kode NTPN melalui integrasi API Ditjen Pajak / Bank Daerah.\n3. Alur persetujuan bertingkat (Bendahara -> PPTK -> PPK-SKPD -> PA) dengan Tanda Tangan Elektronik (TTE) BSrE.\n4. Notifikasi penolakan atau perbaikan berkas secara real-time via WhatsApp/Email gateway.' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Principal Technical Product Manager (TPM) dan Solutions Architect Senior.
+
+Bantu buatkan Dokumen Kebutuhan Produk (Product Requirement Document - PRD) berstandar industri perangkat lunak modern untuk:
+- Sistem: ${f.namaAplikasi}
+- Problem Statement: ${f.latarBelakangMasalah}
+- Fitur Kunci:
+${f.fiturUtamaSistem}
+
+Sistematika PRD teknis yang harus Anda susun:
+1. Executive Summary & Success Metrics (KPI teknis dan adopsi pengguna).
+2. User Personas & Role-Based Access Control (RBAC) Matrix.
+3. Functional Requirements Lengkap dengan Skenario BDD Gherkin Syntax (Given - When - Then) untuk pengujian QA.
+4. Non-Functional Requirements (Performance, Security OWASP, Concurrency, Availability 99.9%).
+5. Diagram Alur Data & State Machine Transisi Status Dokumen.
+
+${opts.constraintsPrompt}`
+                    },
+                    {
+                        id: 'sw_schema_postgres_api',
+                        name: 'Rancangan Skema Database PostgreSQL & Kontrak REST API',
+                        description: 'Desain skema DDL PostgreSQL, indeks performa, foreign keys, relasi ACID, serta kontrak REST API JSON.',
+                        fields: [
+                            { id: 'domainFiturApi', label: 'Domain Entitas / Modul API', type: 'text', default: 'Modul Penatausahaan SPJ & Pembayaran Kas Daerah (SIPD Integration)' },
+                            { id: 'entitasKunci', label: 'Daftar Entitas Data Utama', type: 'textarea', default: 'users, organizations (SKPD), spj_submissions, kuitansi_items, tax_deductions (NTPN), audit_logs, approval_histories.' },
+                            { id: 'kebutuhanEndpoint', label: 'Spesifikasi Operasi API yang Dibutuhkan', type: 'textarea', default: 'Endpoint CRUD berkas SPJ, endpoint verifikasi NTPN pajak pihak ketiga, endpoint persetujuan digital PPK-SKPD, dan endpoint ekspor laporan realisasi keuangan format JSON/Excel.' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Principal Database Administrator (PostgreSQL Specialist) dan Backend Lead Architect.
+
+Susun rancangan arsitektur data dan kontrak API komprehensif untuk:
+- Domain: ${f.domainFiturApi}
+- Entitas: ${f.entitasKunci}
+- Kebutuhan Endpoint:
+${f.kebutuhanEndpoint}
+
+Format naskah teknis yang harus dihasilkan:
+1. DDL PostgreSQL Lengkap (Tabel dengan tipe data UUID/BigInt, Timestamps, Constraints, Foreign Keys, dan Composite Indexes untuk query kecepatan tinggi).
+2. Spesifikasi Kontrak REST API (Metode HTTP, URL Endpoint, Request Payload JSON, Response 200/201, Error Handling 400/401/422/500).
+3. Strategi Keamanan Transaksi Database (ACID Transactions, Row Level Security / RLS, dan Audit Trail).
+
+${opts.constraintsPrompt}`
+                    }
+                ]
+            },
+
+            // KATEGORI 5: BISNIS & PENJUALAN (OMZET)
+            {
+                categoryKey: 'bisnis_penjualan',
+                categoryName: 'Bisnis & Peningkatan Omzet',
+                categoryIcon: '📈',
+                templates: [
+                    {
+                        id: 'biz_grand_offer',
+                        name: 'Grand Irresistible Offer Penawaran Bernilai Tinggi ($100M Offers)',
+                        description: 'Perancangan penawaran produk/jasa berdaya pikat tinggi berbasis Value Equation (Alex Hormozi).',
+                        fields: [
+                            { id: 'namaProdukBiz', label: 'Nama Produk / Jasa yang Ditawarkan', type: 'text', default: 'Paket Pendampingan Asistensi Pelaporan Keuangan & SAKIP Bebas Temuan BPK' },
+                            { id: 'targetPasarBiz', label: 'Target Pasar Spesifik (Ideal Customer Profile)', type: 'text', default: 'Sekretariat OPD, Bagian Keuangan, dan Tim Penyusun Renja/LAKIP Dinas Pemerintah' },
+                            { id: 'hargaPesaingBiz', label: 'Harga Penawaran & Rata-Rata Biaya Masalah', type: 'text', default: 'Investasi Rp 45.000.000,- (Bandingkan dengan risiko kerugian temuan audit TGR ratusan juta rupiah)' },
+                            { id: 'masalahTerbesarKlien', label: 'Masalah Utama & Keraguan Calon Klien', type: 'textarea', default: 'Pegawai kewalahan saat tutup buku akhir tahun, data KIB aset tidak pernah cocok dengan LRA, dan takut terkena temuan kepatuhan oleh auditor pemeriksa BPK.' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Konsultan Strategi Bisnis Utama dan Master Offer Designer berpedoman pada prinsip Value Equation Alex Hormozi.
+
+Bantu rancang Penawaran Tak Tertolak (Grand Irresistible Offer) untuk:
+- Produk/Jasa: ${f.namaProdukBiz}
+- Target Audiens: ${f.targetPasarBiz}
+- Nilai Investasi: ${f.hargaPesaingBiz}
+- Titik Masalah Klien:
+${f.masalahTerbesarKlien}
+
+Struktur penawaran yang harus Anda bangun:
+1. Dream Outcome Framing (Hasil akhir impian yang didambakan klien).
+2. Elemen Value Equation (Maksimalisasi Dream Outcome & Perceived Likelihood of Achievement, Minimalisasi Time Delay & Effort/Sacrifice).
+3. Bundle Penawaran Inti + 4 Bonus Bernilai Tinggi.
+4. Jaminan Tanpa Risiko (Reversing Risk / Unconditional Guarantee).
+5. Skrip Presentasi Penjualan & Alasan Kelangkaan (Scarcity & Urgency).
+
+${opts.constraintsPrompt}`
+                    }
+                ]
+            },
+
+            // KATEGORI 6: TATA KELOLA SOP & LEGAL DRAFTING
+            {
+                categoryKey: 'sop_legal',
+                categoryName: 'SOP Kedinasan & Regulasi',
+                categoryIcon: '⚖️',
+                templates: [
+                    {
+                        id: 'sop_iso9001_kedinasan',
+                        name: 'SOP Standar ISO 9001:2015 dengan Matriks RACI Kedinasan',
+                        description: 'Penyusunan Prosedur Operasional Standar (SOP) lengkap dengan konsideran, alur langkah, dan matriks tanggung jawab RACI.',
+                        fields: [
+                            { id: 'namaSop', label: 'Judul Prosedur Operasional Standar (SOP)', type: 'text', default: 'SOP Penatausahaan dan Penerbitan Surat Perintah Pencairan Dana Ganti Uang (SP2D-GU)' },
+                            { id: 'satkerSop', label: 'Unit Kerja Pelaksana & Pengendali Mutu', type: 'text', default: 'Badan Pengelolaan Keuangan dan Aset Daerah cq. Bidang Perbendaharaan' },
+                            { id: 'dasarHukumSop', label: 'Landasan Hukum Peraturan yang Mengikat', type: 'textarea', default: 'Permendagri No. 77 Tahun 2020 tentang Pedoman Teknis Pengelolaan Keuangan Daerah dan Peraturan Kepala Daerah tentang Sistem dan Prosedur Pengelolaan Keuangan Daerah.' },
+                            { id: 'tahapanAlurKerja', label: 'Tahapan Alur Proses Kerja Utama', type: 'textarea', default: '1. Penerimaan dan registrasi berkas SPM-GU dari SKPD.\n2. Verifikasi kelengkapan dokumen penguji dan sisa batas UP.\n3. Penerbitan draf SP2D oleh Kuasa BUD.\n4. Penandatanganan elektronik SP2D oleh Kuasa BUD.\n5. Transmisi elektronik ke Bank Persepsi dan pencairan dana ke rekening bendahara.' }
+                        ],
+                        compile: (f, opts) => `Bertindaklah sebagai Konsultan Manajemen Mutu ISO 9001:2015 dan Analis Tata Laksana Organisasi Kedinasan.
+
+Susun Dokumen Prosedur Operasional Standar (SOP) resmi dan akuntabel untuk:
+- Judul SOP: ${f.namaSop}
+- Unit Kerja: ${f.satkerSop}
+- Dasar Hukum:
+${f.dasarHukumSop}
+- Rangkaian Alur Kerja:
+${f.tahapanAlurKerja}
+
+Sistematika dokumen SOP resmi yang wajib disajikan:
+1. Lembar Identitas SOP (Konsideran hukum, kualifikasi pelaksana, peralatan/perlengkapan, peringatan, dan pencatatan).
+2. Matriks Prosedur Kerja Standar (Tabel: No, Aktivitas Langkah, Pelaksana, Kelengkapan Masukan, Keluaran/Output, Waktu Penyelesaian Menit/Jam).
+3. Matriks RACI (Responsible, Accountable, Consulted, Informed) antar-jabatan.
+4. Lembar Pengendalian Dokumen dan Riwayat Perubahan Prosedur.
+
+${opts.constraintsPrompt}`
+                    }
+                ]
+            }
+        ];
+
+        // ==========================================
+        // COMBINATORIAL MATRIX DATASET (1.000.000+)
+        // ==========================================
+        const MATRIX_DATA = {
+            roles: [
+                { id: 'akuntan_pemda', label: 'Kepala Bidang Akuntansi & Pelaporan Keuangan Pemda (PPKD)', desc: 'Penguasa SAP Akrual PP 71/2010, CaLK Bab I-VI, rekonsiliasi LRA-LO, dan Permendagri 77/2020' },
+                { id: 'auditor_bpk', label: 'Auditor Senior Pemeriksa Keuangan Negara & BPK RI', desc: 'Ahli uji kepatuhan belanja, audit LKPD, kertas kerja kas opname, dan matriks tindak lanjut 60 hari' },
+                { id: 'ppk_skpd', label: 'Pejabat Penatausahaan Keuangan SKPD (PPK-SKPD)', desc: 'Spesialis verifikasi SPJ-UP/GU/TU/LS, uji formal/material bukti kuitansi, dan kepatuhan pajak NTPN' },
+                { id: 'pengurus_aset', label: 'Pengurus Barang Pengguna & Spesialis Rekonsiliasi Aset (KIB)', desc: 'Ahli rekonsiliasi belanja modal akun 5.2 vs register fisik KIB A s.d. F, KDP, dan inventarisasi BMD' },
+                { id: 'sekwan_dprd', label: 'Sekretaris DPRD / Pejabat Pengelola Keuangan Setwan Kalteng', desc: 'Pakar hak keuangan dewan PP 18/2017, perjadin lumpsum Perpres 53/2023 & SPJ reses Dapil I-V Kalteng' },
+                { id: 'perencana_bappeda', label: 'Perencana Ahli Madya Bappeda & Spesialis SAKIP / LAKIP', desc: 'Pakar Renja Permendagri 86/2017, LAKIP/LKjIP PermenPANRB 53/2014 & Pohon Kinerja PermenPANRB 89/2021' },
+                { id: 'evaluator_sakip', label: 'Auditor Madya Inspektorat / Evaluator SAKIP Internal (PermenPANRB 88/2021)', desc: 'Penguji akuntabilitas kinerja komponen perencanaan, pengukuran, pelaporan, dan evaluasi internal' },
+                { id: 'ppk_lkpp', label: 'Pejabat Pembuat Komitmen (PPK) Madya LKPP', desc: 'Sertifikasi kompetensi pengadaan barang dan jasa pemerintah' },
+                { id: 'analis_sdm_aparatur', label: 'Analis SDM Aparatur Ahli Madya & Asesor BKN', desc: 'Pakar penyusunan SKP PermenPANRB 6/2022, Anjab ABK, dan talenta ASN' },
+                { id: 'pendamping_desa', label: 'Tenaga Ahli Madya Pemberdayaan Desa & Dana Desa (Kemendesa)', desc: 'Spesialis APBDes, SISKEUDES, RKPDes partisipatif, dan BUMDes' },
+                { id: 'komite_medik_rs', label: 'Ketua Komite Medis & Auditor Mutu Akreditasi RSUD (Kemenkes)', desc: 'Pakar keselamatan pasien, SOP triase, RKO farmasi, dan akreditasi Kemenkes' },
+                { id: 'pengawas_sekolah', label: 'Pengawas Sekolah Pembina & Tim Fasilitator BOS Kemendikbud', desc: 'Pakar Kurikulum Merdeka, modul berdiferensiasi, ARKAS, dan dana BOSP' },
+                { id: 'tech_architect', label: 'Arsitek Perangkat Lunak Utama & Spesialis Infrastruktur', desc: 'Perancang arsitektur sistem modular, basis data relasional, dan keamanan data' },
+                { id: 'biz_hormozi', label: 'Konsultan Penawaran Bisnis Utama & Peningkatan Pendapatan', desc: 'Spesialis perancangan penawaran tak tertolak dan psikologi nilai pelanggan' },
+                { id: 'perancang_peraturan_hukum', label: 'Perancang Peraturan Perundang-undangan Madya (Legal Drafter)', desc: 'Spesialis penyusunan Naskah Akademik, Ranperda, dan telaahan kepatuhan regulasi' }
+            ],
+            domains: [
+                { id: 'laporan_calk', label: 'Penyusunan Catatan atas Laporan Keuangan (CaLK) LRA & Neraca', detail: 'Penjelasan pos belanja modal, mutasi aset tetap KIB, beban LO, dan pengungkapan peristiwa penting SAP' },
+                { id: 'rekon_aset_kib', label: 'Rekonsiliasi Aset Tetap KIB (A s.d. F) vs Belanja Modal DPA', detail: 'Uji silang SP2D belanja modal 5.2 dengan penambahan fisik KIB A, B, C, D, KDP KIB F, dan kapitalisasi' },
+                { id: 'audit_spj_bku', label: 'Uji Petik Verifikasi Berkas SPJ Bendahara & Kepatuhan Pajak NTPN', detail: 'Pengujian kuitansi UP/GU/TU/LS, surat tugas, honorarium, dan bukti setor pajak NTPN Ditjen Pajak' },
+                { id: 'kas_opname_bank', label: 'Kas Opname Fisik Akhir Tahun & Rekonsiliasi Saldo Bank', detail: 'Pemeriksaan uang tunai brankas, rekonsiliasi deposit in transit vs outstanding check, dan penutupan BKU' },
+                { id: 'tindak_lanjut_bpk', label: 'Penyelesaian Temuan LHP BPK RI & Sidang Majelis TGR / SKTJM', detail: 'Matriks action plan 60 hari, penagihan kelebihan bayar/denda keterlambatan, dan penerbitan STS' },
+                { id: 'jurnal_tutup_buku', label: 'Jurnal Standar Finansial vs Anggaran SIPD-RI & Tutup Buku Akhir Tahun', detail: 'Jurnal penyesuaian akrual, jurnal penutup pendapatan/belanja ke ekuitas, dan neraca saldo penutupan' },
+                { id: 'setwan_dprd_kalteng', label: 'Sekretariat DPRD Provinsi Kalimantan Tengah (Setwan Kalteng)', detail: 'Pengelolaan hak keuangan 45 anggota dewan, reses Dapil I-V Kalteng, perjadin lumpsum, dan CaLK Setwan' },
+                { id: 'sakip_renja_lakip', label: 'Perencanaan Pembangunan Daerah & Akuntabilitas Kinerja (Renja, LAKIP)', detail: 'Penyusunan dokumen Renja Permendagri 86/2017, LAKIP PermenPANRB 53/2014 & Pohon Kinerja PermenPANRB 89/2021' },
+                { id: 'pengadaan_it', label: 'Pengadaan Infrastruktur Jaringan, Server & Kamera Pemantau', detail: 'Paket pengadaan perangkat keras, pusat data, kabel optik, dan lisensi' },
+                { id: 'skp_kinerja_asn', label: 'Manajemen Kinerja ASN, SKP PermenPANRB 6/2022 & Angka Kredit JF', detail: 'Penyusunan RKU, IKI kuantitatif, dialog kinerja pimpinan, dan konversi angka kredit' },
+                { id: 'pemerintahan_desa_dds', label: 'Pengelolaan APBDes, RKPDes & Dana Desa (Kemendesa/SISKEUDES)', detail: 'Padat karya tunai desa (PKTD), BLT Dana Desa, dan pertanggungjawaban BUMDes' },
+                { id: 'rumah_sakit_faskes', label: 'Pelayanan Kesehatan RSUD, Puskesmas & Akreditasi Kemenkes', detail: 'SOP Triase gawat darurat, audit medik, limbah B3, dan RKO farmasi e-katalog' },
+                { id: 'sekolah_merdeka', label: 'Manajemen Sekolah, Modul Kurikulum Merdeka & Dana BOS (ARKAS)', detail: 'Modul ajar berdiferensiasi, RKAS BOSP, dan analisis tindak lanjut mutu ANBK' },
+                { id: 'aplikasi_mobile_saas', label: 'Sistem Aplikasi Seluler Presensi Lapangan & Geofencing GPS', detail: 'Aplikasi Android/iOS, anti-lokasi palsu, dan integrasi data kehadiran' },
+                { id: 'bisnis_omzet', label: 'Strategi Penawaran Bisnis, Peningkatan Omzet & Copywriting', detail: 'Perancangan grand offer, handling objections, dan eksekusi closing penawaran' },
+                { id: 'legal_drafting_daerah', label: 'Tata Kelola SOP Kedinasan & Produk Hukum Daerah (Ranperda)', detail: 'Naskah akademik, penyusunan pasal perundangan, dan matriks pertanggungjawaban RACI' }
+            ],
+            tasks: [
+                { id: 'bab_penjelasan_calk', label: 'Tulis Draf Narasi Bab Penjelasan Pos CaLK Berbasis SAP Akrual', goal: 'Analisis anggaran vs realisasi LRA, rekonsiliasi beban LO, mutasi aset tetap neraca, dan pengungkapan risiko' },
+                { id: 'kertas_kerja_rekon_aset', label: 'Susun Kertas Kerja Rekonsiliasi Aset Tetap KIB A s.d. F vs Belanja Modal LRA', goal: 'Uji silang SP2D belanja modal akun 5.2 dengan penambahan register KIB, KDP KIB F, dan kapitalisasi neraca' },
+                { id: 'verifikasi_spj_up_gu', label: 'Lakukan Verifikasi Substantif Berkas SPJ Bendahara Pengeluaran (UP/GU/TU/LS)', goal: 'Uji material, kelengkapan bukti pengeluaran, kepatuhan batas SSH/SBM, dan validasi NTPN pajak Ditjen Pajak' },
+                { id: 'ba_kas_opname_bank', label: 'Susun Berita Acara Kas Opname Fisik & Rekonsiliasi Bank 4 Kolom Akhir Tahun', goal: 'Pemeriksaan uang tunai di brankas bendahara, uji deposit in transit vs outstanding check, dan penutupan BKU' },
+                { id: 'action_plan_bpk_tgr', label: 'Susun Matriks Action Plan 60 Hari Tindak Lanjut Temuan LHP BPK & Draf SKTJM', goal: 'Matriks rekomendasi BPK, validasi STS pengembalian kas daerah, dan draf SKTJM Majelis TGR' },
+                { id: 'jurnal_standar_sipd', label: 'Formulasikan Jurnal Standar Finansial vs Anggaran SIPD-RI & Jurnal Tutup Buku', goal: 'Pencatatan double-entry belanja/beban, jurnal penyesuaian akhir tahun, dan neraca saldo pasca penutupan' },
+                { id: 'spj_setwan_dprd', label: 'Verifikasi SPJ Hak Keuangan & Administratif DPRD Prov. Kalteng (PP 18/2017)', goal: 'Uji keabsahan TKI, tunjangan perumahan/transportasi appraisal, BOP pimpinan, dan PPh 21' },
+                { id: 'spj_reses_kalteng', label: 'Susun Dokumen Pertanggungjawaban Keuangan Reses DPRD Kalteng (Dapil I - V)', goal: 'Verifikasi sewa gedung pertemuan, konsumsi konstituen, transport lokal, dan rekap pokok pikiran (Pokir)' },
+                { id: 'susun_renja_pd', label: 'Susun Dokumen Rencana Kerja (Renja) SKPD Sesuai Permendagri 86/2017', goal: 'Evaluasi kinerja tahun lalu, perumusan target program outcome/output, dan tabel matriks pendanaan TC-33' },
+                { id: 'susun_lakip_lkjip', label: 'Susun Laporan Kinerja Instansi Pemerintah (LAKIP/LKjIP) Sesuai PermenPANRB 53/2014 & 88/2021', goal: 'Analisis capaian IKU target vs realisasi, efisiensi anggaran belanja, ulasan kendala, dan rencana aksi perbaikan' },
+                { id: 'susun_kak', label: 'Susun Dokumen Kerangka Acuan Kerja (KAK / TOR) Komprehensif', goal: 'Latar belakang yuridis, maksud/tujuan, kualifikasi tenaga ahli, kurva S, serah terima BAST' },
+                { id: 'susun_skp_permenpan6', label: 'Rumuskan Dokumen SKP Pegawai & Matriks Peran Hasil Sesuai PermenPANRB 6/2022', goal: 'Penyelarasan RKU atasan, penetapan indikator IKI multi-aspek, dan panduan perilaku BerAKHLAK' },
+                { id: 'susun_spj_dana_desa', label: 'Verifikasi Pertanggungjawaban SPJ Dana Desa & Padat Karya Tunai (SISKEUDES)', goal: 'Uji transparansi belanja APBDes, bukti kas opname kas desa, dan kepatuhan penyetoran pajak' },
+                { id: 'susun_prd_modern', label: 'Tulis Dokumen Spesifikasi Kebutuhan Produk (PRD) Berstandar BDD Gherkin', goal: 'Spesifikasi fitur fungsional, matriks RBAC, skenario pengujian Gherkin, dan arsitektur database' }
+            ],
+            outputs: [
+                { id: 'dokumen_resmi_bab', label: 'Dokumen Resmi Kedinasan Multi-BAB (Sistematika Standar Pemerintah)' },
+                { id: 'kertas_kerja_rekon', label: 'Kertas Kerja Rekonsiliasi Keuangan & Matriks Komparatif LRA/LO/Neraca' },
+                { id: 'berita_acara_sah', label: 'Naskah Berita Acara Legal Formal Lengkap dengan Lembar Pengesahan Tanda Tangan' },
+                { id: 'matriks_action_plan', label: 'Matriks Tindak Lanjut Standar BPK RI + Lembar Validasi STS Kas Daerah' },
+                { id: 'tabel_jurnal_akrual', label: 'Tabel Jurnal Berpasangan SIPD-RI (Jurnal Finansial & Jurnal Anggaran)' }
+            ],
+            constraints: [
+                { id: 'ketat_sap_akrual', label: 'Wajib Kepatuhan Standar Akuntansi Pemerintahan (SAP Akrual PP 71/2010 & Permendagri 77/2020)' },
+                { id: 'ketat_audit_bpk', label: 'Wajib Kepatuhan Standar Pemeriksaan Keuangan Negara (SPKN BPK RI & UU 15/2004 Bebas Temuan)' },
+                { id: 'ketat_setwan_dprd', label: 'Wajib Kepatuhan PP 18/2017 Hak Keuangan DPRD, Perpres 53/2023 Perjadin Lumpsum & Standar BPK RI' },
+                { id: 'ketat_sakip_permenpan', label: 'Wajib Kepatuhan Permendagri 86/2017 (Perencanaan Daerah) & PermenPANRB 53/2014, 88/2021, 89/2021 (SAKIP)' },
+                { id: 'ketat_anti_halusinasi', label: 'Nol Halusinasi: Dilarang mengarang nomor regulasi, pasal fiktif, atau rumus perhitungan palsu' }
+            ]
+        };
+
+        const TOTAL_BANK_PROMPTS = 10200;
+        const ITEMS_PER_PAGE = 20;
+        let bankCurrentPage = 1;
+        let bankFilteredIndices = [];
+        let currentTemplateId = 'keu_calk_sap_akrual';
+        let copyHistory = [];
+        let currentAppMode = 'bank10k';
+
+        function initBankPromptIndices() {
+            bankFilteredIndices = [];
+            for (let i = 0; i < TOTAL_BANK_PROMPTS; i++) {
+                bankFilteredIndices.push(i);
+            }
+        }
+
+        function getPromptDetailsByIndex(idx) {
+            const role = MATRIX_DATA.roles[(idx * 11 + 3) % MATRIX_DATA.roles.length];
+            const domain = MATRIX_DATA.domains[(idx * 7 + 5) % MATRIX_DATA.domains.length];
+            const task = MATRIX_DATA.tasks[(idx * 13 + 7) % MATRIX_DATA.tasks.length];
+            const output = MATRIX_DATA.outputs[(idx * 3 + 2) % MATRIX_DATA.outputs.length];
+            const constraint = MATRIX_DATA.constraints[(idx * 5 + 4) % MATRIX_DATA.constraints.length];
+
+            const idStr = String(idx + 1).padStart(5, '0');
+            const title = `Prompt #${idStr}: ${task.label.slice(0, 48)}...`;
+            const subtitle = `${role.label.slice(0, 36)} • ${domain.label.slice(0, 36)}`;
+
+            return { idx, idStr, title, subtitle, role, domain, task, output, constraint };
+        }
+
+        function renderBankItems() {
+            const container = document.getElementById('bank10kItemsList');
+            if (!container) return;
+            container.innerHTML = '';
+
+            const totalFiltered = bankFilteredIndices.length;
+            const totalPages = Math.ceil(totalFiltered / ITEMS_PER_PAGE) || 1;
+            if (bankCurrentPage > totalPages) bankCurrentPage = totalPages;
+            if (bankCurrentPage < 1) bankCurrentPage = 1;
+
+            const startIndex = (bankCurrentPage - 1) * ITEMS_PER_PAGE;
+            const pageIndices = bankFilteredIndices.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+            document.getElementById('bankPaginationInfo').textContent = `Halaman ${bankCurrentPage} / ${totalPages} (${totalFiltered.toLocaleString('id-ID')} Prompt)`;
+            document.getElementById('btnBankPrev').disabled = bankCurrentPage <= 1;
+            document.getElementById('btnBankNext').disabled = bankCurrentPage >= totalPages;
+
+            if (pageIndices.length === 0) {
+                container.innerHTML = `
+                    <div class="p-6 text-center text-xs text-slate-500">
+                        Tidak ada prompt yang cocok dengan kriteria pencarian Anda.
+                    </div>
+                `;
+                return;
+            }
+
+            pageIndices.forEach(idx => {
+                const item = getPromptDetailsByIndex(idx);
+                const el = document.createElement('div');
+                el.className = 'p-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0c1220] hover:border-emerald-500 dark:hover:border-emerald-500 cursor-pointer neu-flat-light dark:neu-flat-dark transition group';
+                el.onclick = () => loadBankPrompt(idx);
+
+                el.innerHTML = `
+                    <div class="flex items-center justify-between pb-1">
+                        <span class="text-[10px] font-mono font-extrabold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full">#${item.idStr}</span>
+                        <span class="text-[10px] text-slate-400 font-medium">Klik untuk Muat ⚡</span>
+                    </div>
+                    <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition">${item.task.label}</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 truncate">${item.subtitle}</div>
+                `;
+                container.appendChild(el);
+            });
+        }
+
+        function loadBankPrompt(idx) {
+            const item = getPromptDetailsByIndex(idx);
+            
+            document.getElementById('activeCategoryBadge').textContent = `🔥 Bank 10.000+ Prompt Terindeks`;
+            document.getElementById('activeTemplateBadge').textContent = `Prompt #${item.idStr}`;
+            document.getElementById('activeTemplateTitle').textContent = `Prompt #${item.idStr}: ${item.task.label}`;
+            document.getElementById('activeTemplateDesc').textContent = `Spesialis: ${item.role.label} | Fokus Sektor: ${item.domain.label}`;
+
+            const compiled = `Bertindaklah sebagai ${item.role.label} (${item.role.desc}).
+
+TUGAS POKOK DAN FOKUS KERJA:
+${item.task.label}.
+Sasaran Capaian: ${item.task.goal}.
+
+KONTEKS DAN LINGKUP BIDANG KASUS:
+- Bidang/Sektor: ${item.domain.label}
+- Lingkup Realitas Lapangan: ${item.domain.detail}
+- Catatan Operasional: Wajib menggunakan terminologi resmi, akurat tanpa menggunakan tanda kurung siku placeholder [...]. Jika diperlukan data mikro, tetapkan estimasi parameter teknis rasional dengan catatan verifikasi.
+
+FORMAT KELUARAN YANG WAJIB DIHASILKAN:
+Sajikan seluruh hasil pekerjaan dalam Bahasa Indonesia resmi dengan bentuk: ${item.output.label}.
+Pastikan naskah siap digunakan langsung untuk tugas kedinasan, audit BPK, pelaporan SAP, atau produksi teknis.
+
+BATASAN KETAT & KEPATUHAN STANDAR:
+- Regulasi Kepatuhan: ${item.constraint.label}.
+- Bahasa: 100% Bahasa Indonesia baku sesuai pedoman EYD V.
+- Larangan Keras: Dilarang memberi kata pembuka basa-basi. Langsung sajikan draf substantif dari judul hingga penutup.
+- Sertakan checklist verifikasi atau matriks ringkasan kepatuhan untuk mempermudah pengujian atasan atau tim pemeriksa BPK/APIP.`;
+
+            document.getElementById('compiledPromptView').value = compiled;
+            document.getElementById('charCountBadge').textContent = `${compiled.length} karakter`;
+
+            showToast(`Prompt #${item.idStr} berhasil dimuat ke layar!`);
+            if (window.innerWidth < 1024) setMobileView('output');
+        }
+
+        function handleBankSearch() {
+            const query = document.getElementById('bankSearchQuery').value.toLowerCase().trim();
+            const cat = document.getElementById('bankCategoryFilter').value;
+            applyBankFilters(query, cat);
+        }
+
+        function handleBankCategoryChange() {
+            const query = document.getElementById('bankSearchQuery').value.toLowerCase().trim();
+            const cat = document.getElementById('bankCategoryFilter').value;
+            applyBankFilters(query, cat);
+        }
+
+        function applyBankFilters(query, cat) {
+            bankFilteredIndices = [];
+            for (let i = 0; i < TOTAL_BANK_PROMPTS; i++) {
+                const item = getPromptDetailsByIndex(i);
+                
+                let matchesCat = true;
+                if (cat === 'keuangan') {
+                    matchesCat = item.domain.id.includes('calk') || item.domain.id.includes('rekon') || item.domain.id.includes('audit') || item.domain.id.includes('kas_opname') || item.domain.id.includes('bpk') || item.domain.id.includes('jurnal') || item.role.id.includes('akuntan') || item.role.id.includes('auditor') || item.role.id.includes('ppk_skpd');
+                } else if (cat === 'setwan') {
+                    matchesCat = item.domain.id.includes('setwan') || item.role.id.includes('sekwan') || item.task.id.includes('dprd');
+                } else if (cat === 'sakip') {
+                    matchesCat = item.domain.id.includes('sakip') || item.role.id.includes('perencana') || item.role.id.includes('evaluator_sakip') || item.task.id.includes('renja') || item.task.id.includes('lakip');
+                } else if (cat === 'barjas') {
+                    matchesCat = item.domain.id.includes('pengadaan') || item.role.id.includes('ppk');
+                } else if (cat === 'asn') {
+                    matchesCat = item.domain.id.includes('asn') || item.role.id.includes('aparatur');
+                } else if (cat === 'desa') {
+                    matchesCat = item.domain.id.includes('desa') || item.role.id.includes('desa');
+                } else if (cat === 'kesehatan') {
+                    matchesCat = item.domain.id.includes('rumah_sakit') || item.role.id.includes('medik');
+                } else if (cat === 'sekolah') {
+                    matchesCat = item.domain.id.includes('sekolah') || item.role.id.includes('sekolah');
+                } else if (cat === 'software') {
+                    matchesCat = item.domain.id.includes('aplikasi') || item.role.id.includes('architect');
+                } else if (cat === 'bisnis') {
+                    matchesCat = item.domain.id.includes('omzet') || item.role.id.includes('hormozi');
+                } else if (cat === 'legal') {
+                    matchesCat = item.domain.id.includes('legal') || item.role.id.includes('hukum');
+                }
+
+                if (!matchesCat) continue;
+
+                if (query) {
+                    const textSource = (item.title + ' ' + item.subtitle + ' ' + item.task.goal + ' ' + item.constraint.label).toLowerCase();
+                    if (!textSource.includes(query)) continue;
+                }
+
+                bankFilteredIndices.push(i);
+            }
+
+            bankCurrentPage = 1;
+            renderBankItems();
+        }
+
+        function changeBankPage(delta) {
+            bankCurrentPage += delta;
+            renderBankItems();
+        }
+
+        function jumpToPromptIndex() {
+            const val = parseInt(document.getElementById('bankDirectIndexInput').value, 10);
+            if (isNaN(val) || val < 1 || val > TOTAL_BANK_PROMPTS) {
+                showToast(`Masukkan nomor prompt antara 1 s/d ${TOTAL_BANK_PROMPTS}`);
+                return;
+            }
+            loadBankPrompt(val - 1);
+        }
+
+        function initMatrixSelectors() {
+            populateSelect('matRole', MATRIX_DATA.roles);
+            populateSelect('matDomain', MATRIX_DATA.domains);
+            populateSelect('matTask', MATRIX_DATA.tasks);
+            populateSelect('matOutput', MATRIX_DATA.outputs);
+            populateSelect('matConstraint', MATRIX_DATA.constraints);
+        }
+
+        function populateSelect(elemId, items) {
+            const el = document.getElementById(elemId);
+            if (!el) return;
+            el.innerHTML = items.map(item => 
+                `<option value="${item.id}">${item.label}</option>`
+            ).join('');
+        }
+
+        function switchAppMode(mode) {
+            currentAppMode = mode;
+
+            const tabBank = document.getElementById('tabModeBank10k');
+            const tabCat = document.getElementById('tabModeCatalog');
+            const tabMat = document.getElementById('tabModeMatrix');
+            const tabSyn = document.getElementById('tabModeSynthesizer');
+
+            const sBtnBank = document.getElementById('sidebarBtnBank10k');
+            const sBtnCat = document.getElementById('sidebarBtnCatalog');
+            const sBtnMat = document.getElementById('sidebarBtnMatrix');
+            const sBtnSyn = document.getElementById('sidebarBtnSynthesizer');
+
+            const contBank = document.getElementById('containerModeBank10k');
+            const contCat = document.getElementById('containerModeCatalog');
+            const contMat = document.getElementById('containerModeMatrix');
+            const contSyn = document.getElementById('containerModeSynthesizer');
+
+            [tabBank, tabCat, tabMat, tabSyn].forEach(t => {
+                if (t) t.className = "px-4 py-2.5 rounded-xl font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/80 transition whitespace-nowrap flex items-center space-x-2 active:scale-95";
+            });
+
+            [sBtnBank, sBtnCat, sBtnMat, sBtnSyn].forEach(b => {
+                if (b) b.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition";
+            });
+
+            contBank.classList.add('hidden');
+            contCat.classList.add('hidden');
+            contMat.classList.add('hidden');
+            contSyn.classList.add('hidden');
+
+            if (mode === 'bank10k') {
+                tabBank.className = "px-4 py-2.5 rounded-xl font-bold flex items-center space-x-2 bg-emerald-600 text-white shadow-sm transition whitespace-nowrap active:scale-95";
+                sBtnBank.className = "w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-bold bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700/50 transition";
+                contBank.classList.remove('hidden');
+                document.getElementById('activeCategoryBadge').textContent = '🔥 Bank 10.000+ Prompt Terindeks';
+                renderBankItems();
+            } else if (mode === 'catalog') {
+                tabCat.className = "px-4 py-2.5 rounded-xl font-bold flex items-center space-x-2 bg-emerald-600 text-white shadow-sm transition whitespace-nowrap active:scale-95";
+                sBtnCat.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/40 transition";
+                contCat.classList.remove('hidden');
+                const { category } = findTemplateById(currentTemplateId);
+                document.getElementById('activeCategoryBadge').textContent = `${category.categoryIcon} ${category.categoryName}`;
+                compilePrompt();
+            } else if (mode === 'matrix') {
+                tabMat.className = "px-4 py-2.5 rounded-xl font-bold flex items-center space-x-2 bg-indigo-600 text-white shadow-sm transition whitespace-nowrap active:scale-95";
+                sBtnMat.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/40 transition";
+                contMat.classList.remove('hidden');
+                document.getElementById('activeCategoryBadge').textContent = '⚡ Mode Matriks 1.000.000+ Permutasi';
+                document.getElementById('activeTemplateBadge').textContent = 'Kombinatorika P-T-K-O-B';
+                document.getElementById('activeTemplateTitle').textContent = 'Generator Matriks Kombinatorika Raksasa (1.000.000+ Variasi)';
+                document.getElementById('activeTemplateDesc').textContent = 'Kombinasikan persona ahli Akuntansi/BPK, sektor pemerintahan/swasta, tugas spesifik, format output, dan regulasi ketat secara instan.';
+                generateFromMatrix();
+            } else if (mode === 'synthesizer') {
+                tabSyn.className = "px-4 py-2.5 rounded-xl font-bold flex items-center space-x-2 bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600 text-white shadow-sm transition whitespace-nowrap active:scale-95";
+                sBtnSyn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold bg-teal-50 dark:bg-teal-950/40 text-teal-700 dark:text-teal-300 border border-teal-200 dark:border-teal-800/40 transition";
+                contSyn.classList.remove('hidden');
+                document.getElementById('activeCategoryBadge').textContent = '🧠 AI Deep Synthesizer';
+                document.getElementById('activeTemplateBadge').textContent = 'Transformasi Ide Mentah';
+                document.getElementById('activeTemplateTitle').textContent = 'AI Deep Prompt Synthesizer (Gemini 3 Flash)';
+                document.getElementById('activeTemplateDesc').textContent = 'Ketik 1 ide bebas sederhana, AI akan mengembangkannya menjadi master prompt akuntansi/kedinasan terstruktur.';
+            }
+
+            closeMobileSidebar();
+        }
+
+        function generateFromMatrix() {
+            const roleId = document.getElementById('matRole').value;
+            const domainId = document.getElementById('matDomain').value;
+            const taskId = document.getElementById('matTask').value;
+            const outputId = document.getElementById('matOutput').value;
+            const constraintId = document.getElementById('matConstraint').value;
+            const customNotes = document.getElementById('matCustomNotes').value.trim();
+
+            const roleObj = MATRIX_DATA.roles.find(r => r.id === roleId) || MATRIX_DATA.roles[0];
+            const domainObj = MATRIX_DATA.domains.find(d => d.id === domainId) || MATRIX_DATA.domains[0];
+            const taskObj = MATRIX_DATA.tasks.find(t => t.id === taskId) || MATRIX_DATA.tasks[0];
+            const outputObj = MATRIX_DATA.outputs.find(o => o.id === outputId) || MATRIX_DATA.outputs[0];
+            const constraintObj = MATRIX_DATA.constraints.find(c => c.id === constraintId) || MATRIX_DATA.constraints[0];
+
+            let customSection = "";
+            if (customNotes) {
+                customSection = `\nVARIABEL SPESIFIK & PARAMETER TAMBAHAN DARI PENGGUNA:\n${customNotes}\n`;
+            }
+
+            const compiled = `Bertindaklah sebagai ${roleObj.label} (${roleObj.desc}).
+
+TUGAS UTAMA:
+${taskObj.label}.
+Fokus Penuntasan: ${taskObj.goal}.
+
+KONTEKS DAN LINGKUP BIDANG PEKERJAAN:
+- Sektor/Bidang: ${domainObj.label}
+- Ruang Lingkup Kasus: ${domainObj.detail}
+${customSection}
+FORMAT KELUARAN YANG WAJIB DIHASILKAN:
+Sajikan seluruh hasil pekerjaan dalam Bahasa Indonesia resmi dengan bentuk: ${outputObj.label}.
+Pastikan hasil memiliki penomoran hierarki yang jelas, komprehensif, tidak ada bagian yang terpotong, serta siap dijadikan acuan kerja langsung tanpa perlu disunting ulang.
+
+BATASAN KETAT & KEPATUHAN STANDAR:
+- Standar Kepatuhan: ${constraintObj.label}.
+- Seluruh teks, istilah, dan draf dokumen wajib menggunakan Bahasa Indonesia baku yang baik dan benar (EYD V).
+- Hindari basa-basi pembuka ("Tentu saya akan membantu Anda..."). Langsung sajikan draf dokumen substantif dari judul hingga penutup.
+- Jangan gunakan tanda kurung siku kosong seperti [...] atau [Isi di sini]. Jika ada rincian data mikro yang belum disebutkan, rumuskan angka atau spesifikasi asumtif teknis yang rasional dan tambahkan catatan uji petik verifikasi.
+- Buatkan matriks daftar centang operasional atau tabel ringkasan agar dokumen akuntabel dan mudah diverifikasi oleh atasan atau tim pemeriksa BPK/APIP.`;
+
+            document.getElementById('compiledPromptView').value = compiled;
+            document.getElementById('charCountBadge').textContent = `${compiled.length} karakter`;
+        }
+
+        function randomizeMatrix() {
+            const pickRandom = (arr) => arr[Math.floor(Math.random() * arr.length)].id;
+            document.getElementById('matRole').value = pickRandom(MATRIX_DATA.roles);
+            document.getElementById('matDomain').value = pickRandom(MATRIX_DATA.domains);
+            document.getElementById('matTask').value = pickRandom(MATRIX_DATA.tasks);
+            document.getElementById('matOutput').value = pickRandom(MATRIX_DATA.outputs);
+            document.getElementById('matConstraint').value = pickRandom(MATRIX_DATA.constraints);
+            generateFromMatrix();
+            showToast('🎲 Berhasil meracik kombinasi baru dari 1.000.000+ variasi!');
+        }
+
+        function renderSidebarCatalog(filterKeyword = '') {
+            const container = document.getElementById('sidebarNavContent');
+            container.innerHTML = '';
+
+            const keyword = filterKeyword.toLowerCase().trim();
+            let visibleCount = 0;
+
+            CATALOG.forEach(category => {
+                const matchingTemplates = category.templates.filter(t => 
+                    t.name.toLowerCase().includes(keyword) || 
+                    t.description.toLowerCase().includes(keyword) ||
+                    category.categoryName.toLowerCase().includes(keyword)
+                );
+
+                if (matchingTemplates.length === 0) return;
+
+                visibleCount += matchingTemplates.length;
+
+                const groupEl = document.createElement('div');
+                groupEl.className = 'space-y-1';
+
+                const headerEl = document.createElement('div');
+                headerEl.className = 'px-2 py-1 flex items-center justify-between text-[11px] font-extrabold text-slate-500 dark:text-slate-400 uppercase tracking-wider';
+                headerEl.innerHTML = `
+                    <span class="flex items-center space-x-1.5">
+                        <span>${category.categoryIcon}</span>
+                        <span>${category.categoryName}</span>
+                    </span>
+                    <span class="text-[10px] text-slate-400 dark:text-slate-500 font-mono font-bold">${matchingTemplates.length}</span>
+                `;
+                groupEl.appendChild(headerEl);
+
+                matchingTemplates.forEach(tpl => {
+                    const btn = document.createElement('button');
+                    const isActive = tpl.id === currentTemplateId;
+                    btn.type = 'button';
+                    btn.className = `w-full text-left px-3 py-2 rounded-2xl text-xs transition flex flex-col space-y-0.5 ${isActive ? 'active-template-item text-emerald-700 dark:text-emerald-300' : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/80 hover:text-slate-900 dark:hover:text-white'}`;
+                    btn.onclick = () => selectTemplate(tpl.id);
+
+                    btn.innerHTML = `
+                        <span class="font-bold truncate">${tpl.name}</span>
+                        <span class="text-[10px] text-slate-400 dark:text-slate-500 truncate">${tpl.description}</span>
+                    `;
+                    groupEl.appendChild(btn);
+                });
+
+                container.appendChild(groupEl);
+            });
+
+            document.getElementById('totalTemplatesCount').textContent = `10.200+ Prompt`;
+        }
+
+        function filterTemplates() {
+            const keyword = document.getElementById('templateSearchInput').value;
+            renderSidebarCatalog(keyword);
+        }
+
+        function findTemplateById(id) {
+            for (const cat of CATALOG) {
+                const found = cat.templates.find(t => t.id === id);
+                if (found) return { template: found, category: cat };
+            }
+            return { template: CATALOG[0].templates[0], category: CATALOG[0] };
+        }
+
+        function selectTemplate(templateId) {
+            currentTemplateId = templateId;
+            const { template, category } = findTemplateById(templateId);
+
+            document.getElementById('activeCategoryBadge').textContent = `${category.categoryIcon} ${category.categoryName}`;
+            document.getElementById('activeTemplateBadge').textContent = template.name;
+            document.getElementById('activeTemplateTitle').textContent = template.name;
+            document.getElementById('activeTemplateDesc').textContent = template.description;
+
+            renderSidebarCatalog(document.getElementById('templateSearchInput').value);
+            renderDynamicForm(template);
+            compilePrompt();
+            closeMobileSidebar();
+            if (currentAppMode !== 'catalog') switchAppMode('catalog');
+        }
+
+        function renderDynamicForm(tpl) {
+            const container = document.getElementById('dynamicForm');
+            container.innerHTML = '';
+
+            tpl.fields.forEach(f => {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'space-y-1.5';
+
+                const label = document.createElement('label');
+                label.className = 'block text-xs font-bold text-slate-700 dark:text-slate-300';
+                label.textContent = f.label;
+                wrapper.appendChild(label);
+
+                if (f.type === 'textarea') {
+                    const textarea = document.createElement('textarea');
+                    textarea.id = 'field_' + f.id;
+                    textarea.rows = 3;
+                    textarea.value = f.default;
+                    textarea.className = 'w-full bg-slate-50 dark:bg-[#070b13] border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs rounded-2xl p-3 neu-inset-light dark:neu-inset-dark focus:ring-2 focus:ring-emerald-500/40 focus:outline-none leading-relaxed transition';
+                    wrapper.appendChild(textarea);
+                } else {
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.id = 'field_' + f.id;
+                    input.value = f.default;
+                    input.className = 'w-full bg-slate-50 dark:bg-[#070b13] border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs rounded-2xl p-2.5 neu-inset-light dark:neu-inset-dark focus:ring-2 focus:ring-emerald-500/40 focus:outline-none transition';
+                    wrapper.appendChild(input);
+                }
+
+                container.appendChild(wrapper);
+            });
+        }
+
+        function compilePrompt() {
+            const { template } = findTemplateById(currentTemplateId);
+            if (!template) return;
+
+            const fieldValues = {};
+            template.fields.forEach(f => {
+                const el = document.getElementById('field_' + f.id);
+                fieldValues[f.id] = el ? el.value.trim() : f.default;
+            });
+
+            const noHalusinasi = document.getElementById('chkNoHalusinasi').checked;
+            const formatTabel = document.getElementById('chkFormatTabel').checked;
+            const gayaFormal = document.getElementById('chkGayaFormal').checked;
+
+            let constraintsParts = [];
+            if (noHalusinasi) {
+                constraintsParts.push("- Hindari membuat asumsi fiktif atau nomor pasal palsu. Jika membutuhkan data regulasi atau parameter yang tidak disebutkan, cantumkan catatan verifikasi teknis secara eksplisit.");
+            }
+            if (formatTabel) {
+                constraintsParts.push("- Buatkan ringkasan matriks kunci dan checklist operasional dalam format Tabel Markdown agar rapi dan mudah diekspor.");
+            }
+            if (gayaFormal) {
+                constraintsParts.push("- Gunakan kaidah Bahasa Indonesia baku yang profesional, tepat guna, dan berwibawa sesuai tata bahasa kedinasan/teknis (EYD V).");
+            }
+
+            const constraintsPrompt = constraintsParts.length > 0 
+                ? "INSTRUKSI TAMBAHAN & BATASAN KETAT:\n" + constraintsParts.join("\n") 
+                : "";
+
+            const compiled = template.compile(fieldValues, { constraintsPrompt });
+            const view = document.getElementById('compiledPromptView');
+            view.value = compiled;
+            document.getElementById('charCountBadge').textContent = `${compiled.length} karakter`;
+        }
+
+        function resetCurrentFormToPreset() {
+            if (currentAppMode === 'bank10k') {
+                loadBankPrompt(0);
+                showToast('Prompt awal #00001 dimuat kembali!');
+                return;
+            }
+            const { template } = findTemplateById(currentTemplateId);
+            if (!template) return;
+            template.fields.forEach(f => {
+                const el = document.getElementById('field_' + f.id);
+                if (el) el.value = f.default;
+            });
+            compilePrompt();
+            showToast('Form diisi ulang dengan contoh riil!');
+        }
+
+        function clearAllPromptFields() {
+            const view = document.getElementById('compiledPromptView');
+            if (view) view.value = '';
+            document.getElementById('charCountBadge').textContent = '0 karakter';
+            showToast('Layar keluaran prompt dikosongkan.');
+        }
+
+        function loadRandomPreset() {
+            if (currentAppMode === 'bank10k') {
+                const randomIdx = Math.floor(Math.random() * TOTAL_BANK_PROMPTS);
+                loadBankPrompt(randomIdx);
+                showToast(`🎲 Prompt acak #${String(randomIdx+1).padStart(5, '0')} dimuat!`);
+                return;
+            }
+            const allTemplates = [];
+            CATALOG.forEach(c => c.templates.forEach(t => allTemplates.push(t.id)));
+            const randomId = allTemplates[Math.floor(Math.random() * allTemplates.length)];
+            selectTemplate(randomId);
+            showToast('Contoh baru berhasil dimuat!');
+        }
+
+        function toggleAdvancedFilters() {
+            const box = document.getElementById('advancedFiltersBox');
+            const chev = document.getElementById('advChevron');
+            if (box.classList.contains('hidden')) {
+                box.classList.remove('hidden');
+                chev.textContent = '▲';
+            } else {
+                box.classList.add('hidden');
+                chev.textContent = '▼';
+            }
+        }
+
+        function initAppLogo() {
+            const savedImg = localStorage.getItem('app_custom_logo_img');
+            const logoImgEl = document.getElementById('customAppLogoImg');
+            const fallbackEl = document.getElementById('customAppLogoFallback');
+            
+            if (logoImgEl && fallbackEl) {
+                if (savedImg) {
+                    logoImgEl.onload = function() {
+                        logoImgEl.classList.remove('hidden');
+                        fallbackEl.classList.add('hidden');
+                    };
+                    logoImgEl.onerror = function() {
+                        handleLogoError();
+                    };
+                    logoImgEl.src = savedImg;
+                } else {
+                    logoImgEl.classList.add('hidden');
+                    fallbackEl.classList.remove('hidden');
+                }
+            }
+        }
+
+        function saveCustomLogoDirectUrl() {
+            const urlInput = document.getElementById('customLogoDirectUrlInput');
+            if (!urlInput) return;
+            const url = urlInput.value.trim();
+            if (url) {
+                localStorage.setItem('app_custom_logo_img', url);
+                initAppLogo();
+                showToast('✓ Logo berhasil diperbarui dari URL!');
+                closeModal('logoModal');
+            } else {
+                showToast('Masukkan URL gambar yang valid.');
+            }
+        }
+
+        function handleLogoFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const dataUrl = e.target.result;
+                localStorage.setItem('app_custom_logo_img', dataUrl);
+                initAppLogo();
+                showToast('✓ Logo berhasil diunggah dan disimpan!');
+                closeModal('logoModal');
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function resetAppLogo() {
+            localStorage.removeItem('app_custom_logo_img');
+            const logoImgEl = document.getElementById('customAppLogoImg');
+            const fallbackEl = document.getElementById('customAppLogoFallback');
+            if (logoImgEl) {
+                logoImgEl.src = '';
+                logoImgEl.classList.add('hidden');
+            }
+            if (fallbackEl) fallbackEl.classList.remove('hidden');
+            showToast('Logo dikembalikan ke ikon bawaan.');
+        }
+
+        function copyCompiledPrompt() {
+            const view = document.getElementById('compiledPromptView');
+            if (!view || !view.value) return;
+
+            const textarea = document.createElement('textarea');
+            textarea.value = view.value;
+            textarea.style.position = 'fixed';
+            textarea.style.left = '-9999px';
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showToast('✓ Prompt lengkap berhasil disalin ke Clipboard!');
+                    const btn = document.getElementById('copyPromptBtn');
+                    const origHtml = btn.innerHTML;
+                    btn.innerHTML = `<span class="text-white font-bold">✓ Tersalin!</span>`;
+                    btn.classList.add('bg-emerald-700');
+                    setTimeout(() => {
+                        btn.innerHTML = origHtml;
+                        btn.classList.remove('bg-emerald-700');
+                    }, 1800);
+
+                    saveToHistory(currentTemplateId, view.value);
+                } else {
+                    showToast('Gagal menyalin otomatis, silakan seleksi manual.');
+                }
+            } catch (err) {
+                showToast('Gagal menyalin, silakan seleksi manual.');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        function copyAiOutput() {
+            const out = document.getElementById('aiResultText');
+            if (!out || !out.innerText) return;
+
+            const textarea = document.createElement('textarea');
+            textarea.value = out.innerText;
+            textarea.style.position = 'fixed';
+            textarea.style.left = '-9999px';
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+
+            showToast('Hasil AI berhasil disalin!');
+        }
+
+        function downloadPromptText() {
+            const text = document.getElementById('compiledPromptView').value;
+            if (!text) return;
+            const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Prompt_Master_${new Date().toISOString().slice(0,10)}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showToast('Prompt diunduh dalam file .txt');
+        }
+
+        function saveToHistory(tplId, text) {
+            const item = {
+                id: Date.now(),
+                title: text.slice(0, 36) + '...',
+                snippet: text.slice(0, 140) + '...',
+                fullText: text,
+                time: new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' })
+            };
+            copyHistory.unshift(item);
+            if (copyHistory.length > 25) copyHistory.pop();
+            updateHistoryCounter();
+        }
+
+        function updateHistoryCounter() {
+            const el = document.getElementById('historyCounter');
+            if (el) el.textContent = copyHistory.length;
+        }
+
+        function openHistoryModal() {
+            const list = document.getElementById('historyListContainer');
+            list.innerHTML = '';
+
+            if (copyHistory.length === 0) {
+                list.innerHTML = `<div class="text-center py-6 text-slate-400">Belum ada riwayat prompt yang disalin.</div>`;
+            } else {
+                copyHistory.forEach(item => {
+                    const row = document.createElement('div');
+                    row.className = 'p-3.5 bg-slate-50 dark:bg-[#070b13] rounded-2xl border border-slate-200 dark:border-slate-800 space-y-1.5 neu-inset-light dark:neu-inset-dark';
+                    row.innerHTML = `
+                        <div class="flex items-center justify-between text-[11px]">
+                            <span class="font-extrabold text-emerald-600 dark:text-emerald-400">${item.title}</span>
+                            <span class="text-slate-400 font-mono">${item.time}</span>
+                        </div>
+                        <p class="text-[11px] text-slate-600 dark:text-slate-400 line-clamp-2">${item.snippet}</p>
+                        <div class="flex justify-end pt-1">
+                            <button onclick="restoreFromHistory('${item.id}')" class="text-[11px] font-bold text-indigo-600 dark:text-indigo-400 hover:underline">Muat ke Layar</button>
+                        </div>
+                    `;
+                    list.appendChild(row);
+                });
+            }
+
+            openModal('historyModal');
+        }
+
+        function restoreFromHistory(id) {
+            const item = copyHistory.find(i => String(i.id) === String(id));
+            if (!item) return;
+            document.getElementById('compiledPromptView').value = item.fullText;
+            document.getElementById('charCountBadge').textContent = `${item.fullText.length} karakter`;
+            closeModal('historyModal');
+            showToast('Prompt riwayat dimuat ke layar!');
+        }
+
+        function clearHistoryStorage() {
+            copyHistory = [];
+            updateHistoryCounter();
+            openHistoryModal();
+            showToast('Riwayat berhasil dibersihkan.');
+        }
+
+        function toggleMobileSidebar() {
+            const sidebar = document.getElementById('sidebarMenu');
+            const backdrop = document.getElementById('mobileBackdrop');
+            if (sidebar.classList.contains('-translate-x-full')) {
+                sidebar.classList.remove('-translate-x-full');
+                backdrop.classList.remove('hidden');
+            } else {
+                sidebar.classList.add('-translate-x-full');
+                backdrop.classList.add('hidden');
+            }
+        }
+
+        function closeMobileSidebar() {
+            const sidebar = document.getElementById('sidebarMenu');
+            const backdrop = document.getElementById('mobileBackdrop');
+            if (sidebar && !sidebar.classList.contains('-translate-x-full')) {
+                sidebar.classList.add('-translate-x-full');
+                backdrop?.classList.add('hidden');
+            }
+        }
+
+        function openModal(id) {
+            document.getElementById(id)?.classList.remove('hidden');
+        }
+        function closeModal(id) {
+            document.getElementById(id)?.classList.add('hidden');
+        }
+        function closeAiResult() {
+            document.getElementById('aiResultCard').classList.add('hidden');
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            toastMessage.textContent = message;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3000);
+        }
+
+        async function executeWithGemini() {
+            const promptText = document.getElementById('compiledPromptView').value;
+            if (!promptText) {
+                showToast('Prompt masih kosong!');
+                return;
+            }
+
+            const card = document.getElementById('aiResultCard');
+            const loader = document.getElementById('aiLoadingIndicator');
+            const outText = document.getElementById('aiResultText');
+            const runBtn = document.getElementById('runAiBtn');
+
+            card.classList.remove('hidden');
+            loader.classList.remove('hidden');
+            outText.textContent = '';
+            runBtn.disabled = true;
+            runBtn.classList.add('opacity-50');
+
+            if (window.innerWidth < 1024) {
+                setMobileView('output');
+            }
+
+            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            const systemInstruction = "Bertindaklah sebagai Konsultan Ahli Akuntansi Pemerintah Daerah, Pengadaan Barjas LKPP, SAKIP/Renja, dan Auditor Senior. Hasilkan draf dokumen resmi, kertas kerja, dan berita acara secara mendalam, terperinci, akuntabel, bebas temuan, dan 100% menggunakan Bahasa Indonesia kedinasan baku (EYD V).";
+
+            const payload = {
+                contents: [{ parts: [{ text: promptText }] }],
+                systemInstruction: { parts: [{ text: systemInstruction }] }
+            };
+
+            let retries = 3;
+            let delay = 1000;
+            let success = false;
+            let responseData = null;
+
+            while (retries > 0 && !success) {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.ok) {
+                        responseData = await response.json();
+                        success = true;
+                        break;
+                    } else if (response.status === 429) {
+                        await new Promise(r => setTimeout(r, delay));
+                        delay *= 2;
+                        retries--;
+                    } else {
+                        throw new Error(`HTTP ${response.status}`);
+                    }
+                } catch (e) {
+                    retries--;
+                    if (retries === 0) break;
+                    await new Promise(r => setTimeout(r, delay));
+                    delay *= 2;
+                }
+            }
+
+            loader.classList.add('hidden');
+            runBtn.disabled = false;
+            runBtn.classList.remove('opacity-50');
+
+            if (success && responseData) {
+                const generated = responseData.candidates?.[0]?.content?.parts?.[0]?.text;
+                if (generated) {
+                    outText.textContent = generated;
+                    showToast('✓ AI berhasil menyelesaikan dokumen!');
+                } else {
+                    outText.textContent = "Format respon tidak sesuai atau kosong dari penyedia model.";
+                }
+            } else {
+                outText.textContent = "⚠️ Layanan uji coba AI saat ini sedang padat. Namun teks prompt yang dirangkai sudah 100% lengkap dan siap disalin langsung ke ChatGPT, Claude, atau Gemini Web.";
+            }
+        }
+
+        async function synthesizeMasterPrompt() {
+            const raw = document.getElementById('synthRawInput').value.trim();
+            if (!raw) {
+                showToast('Ketikkan ide atau kebutuhan Anda terlebih dahulu!');
+                return;
+            }
+
+            const role = document.getElementById('synthRoleSelect').value;
+            const depth = document.getElementById('synthDepthSelect').value;
+
+            const loader = document.getElementById('synthLoading');
+            const btn = document.getElementById('btnStartSynthesizer');
+
+            loader.classList.remove('hidden');
+            btn.disabled = true;
+            btn.classList.add('opacity-50');
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            const systemPrompt = `Anda adalah Perancang Prompt Ahli Tingkat Utama (Principal Master Prompt Engineer).
+Tugas Anda adalah mengubah ide mentah atau kebutuhan kasar dari pengguna menjadi sebuah "MASTER PROMPT" berdaya guna tinggi menggunakan formula P-T-K-O-B (Peran, Tugas, Konteks, Output, Batasan).
+ATURAN WAJIB SINTESIS PROMPT:
+1. SEMUA HASIL OUTPUT WAJIB MENGGUNAKAN BAHASA INDONESIA BAKU (EYD V), tanpa campuran bahasa asing kecuali singkatan teknis resmi.
+2. Hasil output Anda HARUS berupa TEKS PROMPT UTUH yang siap disalin dan ditempelkan langsung ke ChatGPT/Claude/Gemini oleh pengguna lain.
+3. JANGAN PERNAH gunakan tanda kurung siku placeholder kosong seperti [Nama Instansi] atau [Nilai Anggaran]. GANTILAH dengan contoh nama konkret dan angka nyata yang sangat relevan dan rasional.
+4. JANGAN memberikan kata pembuka atau penutup kepada pengguna. Langsung hasilkan teks prompt-nya saja.`;
+
+            const userQuery = `Ubah ide kasar berikut menjadi Master Prompt berformula lengkap dalam Bahasa Indonesia:
+Ide Kasar: "${raw}"
+Target Persona: ${role}
+Tingkat Kedalaman: ${depth}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] }
+            };
+
+            let retries = 3;
+            let delay = 1000;
+            let success = false;
+            let generatedPrompt = "";
+
+            while (retries > 0 && !success) {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        generatedPrompt = data.candidates?.[0]?.content?.parts?.[0]?.text;
+                        if (generatedPrompt) {
+                            success = true;
+                            break;
+                        }
+                    } else if (response.status === 429) {
+                        await new Promise(r => setTimeout(r, delay));
+                        delay *= 2;
+                        retries--;
+                    } else {
+                        throw new Error(`HTTP ${response.status}`);
+                    }
+                } catch (e) {
+                    retries--;
+                    if (retries === 0) break;
+                    await new Promise(r => setTimeout(r, delay));
+                    delay *= 2;
+                }
+            }
+
+            loader.classList.add('hidden');
+            btn.disabled = false;
+            btn.classList.remove('opacity-50');
+
+            if (success && generatedPrompt) {
+                document.getElementById('compiledPromptView').value = generatedPrompt;
+                document.getElementById('charCountBadge').textContent = `${generatedPrompt.length} karakter`;
+                showToast('✓ Master prompt berhasil disintesis!');
+                if (window.innerWidth < 1024) setMobileView('output');
+            } else {
+                showToast('Layanan sintesis AI sibuk. Beralih ke Generator Matriks.');
+                switchAppMode('matrix');
+            }
+        }
+
+        window.onload = function () {
+            checkPinAuth();
+            initTheme();
+            initAppLogo();
+            initMatrixSelectors();
+            initBankPromptIndices();
+            renderSidebarCatalog();
+            selectTemplate('keu_calk_sap_akrual');
+            renderBankItems();
+            if (window.innerWidth < 1024) {
+                setMobileView('form');
+            }
+        };
+    </script>
+</body>
+</html>
